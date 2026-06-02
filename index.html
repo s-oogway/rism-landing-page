@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0F172A" />
+  <title>Rism Japan ｜ 3社限定モニター｜無料再来店導線診断</title>
+  <meta name="description" content="新規集客を続けても、リピートは増えません。Rism Japanは、LINE × 動画 × Lステップで、また来たくなる理由を作ります。3社限定で初期パートナーを募集中。" />
+  <meta name="format-detection" content="telephone=no" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            base:    '#F9FAFB',
+            paper:   '#FFFFFF',
+            ink:     '#0F172A',
+            ink2:    '#1E293B',
+            mute:    '#475569',
+            mute2:   '#64748B',
+            line:    '#E5E7EB',
+            line2:   '#CBD5E1',
+            gold:    '#B89968',
+            goldDk:  '#9A7E54',
+            goldLt:  '#E8D9BD',
+            sage:    '#7C8B7D',
+            line_g:  '#06C755'
+          },
+          fontFamily: {
+            jp: ['"Yu Gothic"','YuGothic','"Hiragino Kaku Gothic ProN"','"Hiragino Sans"','"Noto Sans JP"','-apple-system','BlinkMacSystemFont','"Segoe UI"','sans-serif']
+          },
+          letterSpacing: {
+            jp: '0.04em',
+            jpTight: '0.02em',
+            jpWide: '0.12em'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body{
+      font-family:"Yu Gothic",YuGothic,"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      letter-spacing:0.03em;
+      line-height:1.9;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+      font-feature-settings:"palt" 1;
+    }
+    .font-display{
+      letter-spacing:0.02em;
+      line-height:1.5;
+    }
+    .vbar{
+      display:inline-block;width:1px;height:0.9em;background:currentColor;opacity:.4;margin:0 .55em;vertical-align:-0.05em;
+    }
+    .hairline{ height:1px; background:linear-gradient(90deg, transparent, #CBD5E1, transparent); }
+    .hairline-dark{ height:1px; background:linear-gradient(90deg, transparent, rgba(232,217,189,.5), transparent); }
+    .grain{
+      background-image:
+        radial-gradient(rgba(15,23,42,0.025) 1px, transparent 1px);
+      background-size: 4px 4px;
+    }
+    /* CTA */
+    .cta-primary{
+      background:linear-gradient(180deg,#1E293B 0%,#0F172A 100%);
+      box-shadow:0 1px 0 rgba(255,255,255,.06) inset, 0 10px 24px -10px rgba(15,23,42,.45);
+      transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+    }
+    .cta-primary:hover{
+      transform:translateY(-1px);
+      box-shadow:0 1px 0 rgba(255,255,255,.08) inset, 0 16px 30px -10px rgba(15,23,42,.55);
+    }
+    .cta-primary:active{ transform:translateY(0); }
+    .cta-gold{
+      background:linear-gradient(180deg,#C9A977 0%,#A8895A 100%);
+      box-shadow:0 1px 0 rgba(255,255,255,.25) inset, 0 10px 24px -10px rgba(184,153,104,.55);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .cta-gold:hover{
+      transform:translateY(-1px);
+      box-shadow:0 1px 0 rgba(255,255,255,.3) inset, 0 16px 30px -10px rgba(184,153,104,.7);
+    }
+    .cta-gold:active{ transform:translateY(0); }
+    /* Form */
+    .field{
+      transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .field:focus{
+      outline:none;
+      border-color:#0F172A;
+      box-shadow:0 0 0 4px rgba(15,23,42,.08);
+      background:#FFFFFF;
+    }
+    .radio-card{
+      transition: border-color .2s ease, background .2s ease, box-shadow .2s ease;
+    }
+    .radio-card:has(input:checked){
+      border-color:#0F172A;
+      background:#0F172A;
+      color:#fff;
+      box-shadow:0 6px 20px -10px rgba(15,23,42,.5);
+    }
+    /* phone mockup */
+    .device{
+      box-shadow:
+        0 1px 0 rgba(255,255,255,.5) inset,
+        0 30px 60px -20px rgba(15,23,42,.35),
+        0 10px 30px -15px rgba(15,23,42,.25);
+    }
+    .device-screen{
+      background:
+        radial-gradient(120% 60% at 50% 0%, #EAF6EE 0%, #F7FAF8 35%, #FFFFFF 70%);
+    }
+    .chat-bubble{
+      box-shadow:0 1px 2px rgba(15,23,42,.06);
+    }
+    .video-shimmer{
+      background:
+        linear-gradient(135deg, #0F172A 0%, #1E293B 55%, #334155 100%);
+      position:relative; overflow:hidden;
+    }
+    .video-shimmer::after{
+      content:""; position:absolute; inset:0;
+      background:
+        radial-gradient(60% 60% at 30% 30%, rgba(184,153,104,.18), transparent 60%),
+        radial-gradient(60% 60% at 70% 70%, rgba(124,139,125,.22), transparent 60%);
+    }
+    /* Flow */
+    .flow-node{
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .flow-node:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px -18px rgba(15,23,42,.35);
+    }
+    .num-chip{
+      font-feature-settings:"tnum" 1;
+      letter-spacing:0.04em;
+    }
+    /* Reveal */
+    @media (prefers-reduced-motion: no-preference){
+      .reveal{ opacity:0; transform: translateY(10px); transition: opacity .7s ease, transform .7s ease; }
+      .reveal.in{ opacity:1; transform:none; }
+    }
+    /* selection */
+    ::selection{ background:#0F172A; color:#fff; }
+  </style>
+</head>
+<body class="bg-base text-ink font-jp antialiased">
+
+  <!-- ─────────────────────────── Top Utility Bar ─────────────────────────── -->
+  <header class="w-full border-b border-line/80 bg-base/90 backdrop-blur sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 h-12 sm:h-14 flex items-center justify-between">
+      <a href="#top" aria-label="Rism Japan ホーム" class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-gold"></span>
+        <span class="text-[13px] sm:text-sm tracking-[0.18em] font-medium text-ink">RISM&nbsp;JAPAN</span>
+      </a>
+      <a href="#form"
+         class="hidden sm:inline-flex items-center gap-2 text-[12px] tracking-[0.14em] text-ink/80 hover:text-ink transition-colors"
+         aria-label="無料診断のセクションへ移動">
+        無料再来店導線診断
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#form"
+         class="sm:hidden inline-flex items-center gap-1.5 text-[11px] tracking-[0.12em] text-ink/80"
+         aria-label="無料診断のセクションへ移動">
+        診断へ
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- ─────────────────────────── 1. HERO / FIRST VIEW ─────────────────────────── -->
+  <section id="top" class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 grain opacity-60"></div>
+    <div class="absolute -top-32 -right-32 w-[420px] h-[420px] rounded-full -z-10"
+         style="background:radial-gradient(closest-side, rgba(184,153,104,0.18), transparent 70%);"></div>
+    <div class="absolute -bottom-40 -left-40 w-[480px] h-[480px] rounded-full -z-10"
+         style="background:radial-gradient(closest-side, rgba(15,23,42,0.08), transparent 70%);"></div>
+
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 pt-10 sm:pt-16 pb-14 sm:pb-24">
+      <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <!-- LEFT: Copy -->
+        <div class="lg:col-span-7">
+          <!-- Badges -->
+          <div class="flex flex-wrap items-center gap-2 sm:gap-3 mb-6 sm:mb-8">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full border border-ink/15 text-[10px] sm:text-[11px] tracking-[0.18em] text-ink/70 bg-white/60">
+              <span class="w-1 h-1 rounded-full bg-gold"></span>
+              3社限定モニター募集LP 最終版
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-ink text-white text-[10px] sm:text-[11px] tracking-[0.16em]">
+              【3社限定<span class="vbar"></span>無料再来店導線診断】
+            </span>
+          </div>
+
+          <!-- H1 -->
+          <h1 class="font-display text-[28px] leading-[1.45] sm:text-[40px] sm:leading-[1.35] lg:text-[48px] lg:leading-[1.3] font-bold text-ink tracking-[0.01em]">
+            新規集客を続けても、<br class="hidden sm:block" />
+            <span class="relative inline-block">
+              リピートは増えません。
+              <span class="absolute left-0 right-0 -bottom-1 h-[6px] bg-goldLt/70 -z-10 rounded-sm"></span>
+            </span>
+          </h1>
+
+          <!-- Sub copy -->
+          <div class="mt-7 sm:mt-9 space-y-3 text-[14px] sm:text-[15.5px] leading-[2] text-ink2/90">
+            <p>Hot Pepperで集客する。</p>
+            <p>ベースとして、来店後の接点がなければ、お客様はまた比較に戻ります。</p>
+            <p>Rism Japanは、<span class="font-semibold text-ink">LINE × 動画 × Lステップ</span>で、<br class="sm:hidden" />“また来たくなる理由”を作る会社です。</p>
+            <p>現在、<span class="font-semibold text-ink">3社限定</span>で初期パートナーを募集しています。</p>
+          </div>
+
+          <!-- CTA -->
+          <div class="mt-8 sm:mt-10">
+            <a href="#form"
+               class="cta-primary inline-flex w-full sm:w-auto items-center justify-center gap-3 px-7 sm:px-10 py-4 sm:py-5 rounded-full text-white text-[14px] sm:text-[15px] tracking-[0.16em] font-medium"
+               aria-label="無料診断・オンライン面談を予約する（フォームへ移動）">
+              【無料診断・オンライン面談を予約する】
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <p class="mt-4 text-[11.5px] sm:text-[12px] text-mute leading-[1.9] tracking-[0.04em]">
+              ※モニター期間中は、通常より深く伴走するため、募集は3社限定です。
+            </p>
+          </div>
+
+          <!-- Trust strip -->
+          <div class="mt-10 pt-6 border-t border-line flex flex-wrap items-center gap-x-5 gap-y-2 text-[11px] sm:text-[12px] text-mute tracking-[0.14em]">
+            <span class="flex items-center gap-1.5">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12l5 5L20 7" stroke="#7C8B7D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              LINE構築
+            </span>
+            <span class="flex items-center gap-1.5">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12l5 5L20 7" stroke="#7C8B7D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Lステップ設計
+            </span>
+            <span class="flex items-center gap-1.5">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12l5 5L20 7" stroke="#7C8B7D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              動画企画・制作
+            </span>
+          </div>
+        </div>
+
+        <!-- RIGHT: Phone Mockup -->
+        <div class="lg:col-span-5 flex justify-center lg:justify-end">
+          <div class="relative">
+            <!-- Floating chip -->
+            <div class="absolute -left-3 sm:-left-8 top-6 z-10 bg-white border border-line rounded-lg px-3 py-2 shadow-md text-[10px] tracking-[0.14em] text-ink/80">
+              <span class="text-line_g font-semibold">●</span> 来店翌日フォロー
+            </div>
+            <div class="absolute -right-3 sm:-right-8 bottom-16 z-10 bg-ink text-white rounded-lg px-3 py-2 shadow-md text-[10px] tracking-[0.14em]">
+              <span class="text-gold">◆</span> 30日後 次回提案
+            </div>
+
+            <!-- Device -->
+            <div class="device rounded-[44px] bg-ink p-2.5 w-[270px] sm:w-[300px]">
+              <div class="rounded-[36px] device-screen overflow-hidden relative" style="aspect-ratio: 9/19;">
+                <!-- Status bar -->
+                <div class="flex items-center justify-between px-6 pt-3 pb-1 text-[10px] text-ink/80">
+                  <span class="font-semibold num-chip">9:41</span>
+                  <span class="flex items-center gap-1">
+                    <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true"><path d="M1 9c4-5 8-5 12 0" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><circle cx="7" cy="8" r="1" fill="currentColor"/></svg>
+                    <svg width="20" height="10" viewBox="0 0 20 10" fill="none" aria-hidden="true"><rect x="0.5" y="1" width="16" height="8" rx="2" stroke="currentColor"/><rect x="2" y="2.5" width="11" height="5" rx="1" fill="currentColor"/><rect x="17" y="3.5" width="1.5" height="3" rx=".5" fill="currentColor"/></svg>
+                  </span>
+                </div>
+
+                <!-- LINE Header -->
+                <div class="flex items-center gap-2.5 px-4 pt-2 pb-3 border-b border-line/70">
+                  <button aria-label="戻る" class="text-ink/70">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </button>
+                  <div class="w-7 h-7 rounded-full bg-gradient-to-br from-goldLt to-gold flex items-center justify-center text-ink text-[10px] font-bold">RJ</div>
+                  <div class="flex-1 min-w-0">
+                    <div class="text-[11px] font-semibold text-ink truncate">Salon Official</div>
+                    <div class="text-[9px] text-mute">オンライン</div>
+                  </div>
+                  <span class="text-line_g">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 2.6 1.6 4.9 4 6.4-.1.9-.5 2.5-.6 2.9 0 .2.1.4.4.3.2 0 2.3-1.5 3.2-2.1.9.2 2 .3 3 .3 5.5 0 10-3.7 10-8.1S17.5 2 12 2z"/></svg>
+                  </span>
+                </div>
+
+                <!-- Chat area -->
+                <div class="px-3.5 pt-3 pb-6 space-y-2.5">
+                  <div class="text-center text-[9px] text-mute tracking-wider">今日</div>
+
+                  <!-- incoming bubble -->
+                  <div class="flex items-end gap-1.5">
+                    <div class="w-5 h-5 rounded-full bg-gradient-to-br from-goldLt to-gold shrink-0"></div>
+                    <div class="chat-bubble bg-white border border-line/70 rounded-2xl rounded-bl-md px-3 py-2 max-w-[180px]">
+                      <div class="text-[10px] text-ink leading-[1.6]">本日はご来店ありがとうございました。<br/>カラーの色持ちを良くする動画をお送りします◎</div>
+                    </div>
+                  </div>
+
+                  <!-- video card bubble -->
+                  <div class="flex items-end gap-1.5">
+                    <div class="w-5 h-5 shrink-0"></div>
+                    <div class="chat-bubble bg-white border border-line/70 rounded-2xl rounded-bl-md p-1.5 max-w-[200px]">
+                      <div class="video-shimmer rounded-xl aspect-[16/10] flex items-center justify-center">
+                        <button aria-label="動画を再生" class="w-9 h-9 rounded-full bg-white/95 flex items-center justify-center shadow-md">
+                          <svg width="12" height="12" viewBox="0 0 24 24" fill="#0F172A" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                        </button>
+                      </div>
+                      <div class="px-1.5 pt-1.5 pb-1">
+                        <div class="text-[9.5px] font-semibold text-ink">ホームケア動画</div>
+                        <div class="text-[8.5px] text-mute mt-0.5">カラー色持ち / 02:14</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- outgoing -->
+                  <div class="flex justify-end">
+                    <div class="chat-bubble bg-line_g text-white rounded-2xl rounded-br-md px-3 py-2 max-w-[160px]">
+                      <div class="text-[10px] leading-[1.6]">ありがとうございます！<br/>試してみます🌿</div>
+                    </div>
+                  </div>
+
+                  <!-- system schedule chip -->
+                  <div class="flex justify-center pt-1">
+                    <div class="inline-flex items-center gap-1.5 bg-ink/95 text-white rounded-full px-2.5 py-1">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M3 9h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                      <span class="text-[8.5px] tracking-[0.1em]">30日後 自動配信：次回来店の目安</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- input bar -->
+                <div class="absolute bottom-0 left-0 right-0 px-3 py-2 border-t border-line/70 bg-white/95 flex items-center gap-2">
+                  <span class="text-mute"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+                  <div class="flex-1 h-6 rounded-full bg-base border border-line"></div>
+                  <span class="text-line_g"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="hairline max-w-6xl mx-auto"></div>
+
+  <!-- ─────────────────────────── 2. EMPATHY ─────────────────────────── -->
+  <section class="py-20 sm:py-32">
+    <div class="max-w-3xl mx-auto px-6 sm:px-8 text-center">
+      <p class="text-[11px] sm:text-[12px] tracking-[0.32em] text-gold mb-6">EMPATHY <span class="vbar"></span> 共感</p>
+      <h2 class="font-display text-[22px] leading-[1.7] sm:text-[30px] sm:leading-[1.6] font-bold text-ink">
+        「またお願いします」と言われたのに、<br class="hidden sm:block"/>次回来店につながらない。
+      </h2>
+
+      <div class="mt-12 sm:mt-16 text-[14px] sm:text-[15px] leading-[2.2] text-ink2/90 space-y-5 sm:space-y-6">
+        <p>技術が悪いわけじゃない。</p>
+        <p>接客が悪いわけでもない。</p>
+        <p>resentmentでもない。でも、来店後に接点が切れると、<br class="hidden sm:block"/>お客様は少しずつサロンを忘れていきます。</p>
+      </div>
+
+      <div class="mt-12 sm:mt-16 flex flex-col items-center gap-3 text-[14px] sm:text-[15px] text-mute tracking-[0.08em]">
+        <p>翌日、何も届かない。</p>
+        <div class="w-px h-5 bg-line2"></div>
+        <p>1週間後も何も届かない。</p>
+        <div class="w-px h-5 bg-line2"></div>
+        <p>だから、また<span class="text-ink font-medium">Hot Pepperで比較される</span>。</p>
+      </div>
+
+      <div class="mt-14 sm:mt-20 inline-block">
+        <div class="border-t border-b border-ink/20 py-5 px-6 sm:px-10">
+          <p class="text-[15px] sm:text-[18px] font-semibold text-ink tracking-[0.06em]">
+            問題は、“来店後の導線”がないことです。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────── 3. PROBLEM ─────────────────────────── -->
+  <section class="pb-20 sm:pb-28">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8">
+      <div class="relative rounded-2xl sm:rounded-[28px] bg-ink text-white p-7 sm:p-14 overflow-hidden">
+        <div class="absolute -top-24 -right-24 w-[320px] h-[320px] rounded-full opacity-50"
+             style="background:radial-gradient(closest-side, rgba(184,153,104,0.25), transparent 70%);"></div>
+        <div class="absolute -bottom-32 -left-24 w-[360px] h-[360px] rounded-full opacity-40"
+             style="background:radial-gradient(closest-side, rgba(124,139,125,0.22), transparent 70%);"></div>
+
+        <p class="text-[11px] sm:text-[12px] tracking-[0.32em] text-gold mb-5">PROBLEM <span class="vbar"></span> 問題提起</p>
+
+        <h2 class="font-display text-[22px] leading-[1.6] sm:text-[34px] sm:leading-[1.5] font-bold tracking-[0.01em]">
+          美容サロンに必要なのは、<br/>「集客」ではなく、<span class="text-gold">「関係構築」</span>です。
+        </h2>
+
+        <div class="hairline-dark my-8 sm:my-10"></div>
+
+        <div class="text-[14px] sm:text-[15.5px] leading-[2.1] text-white/85 space-y-4 max-w-2xl">
+          <p>多くのサロンは、集客には投資します。</p>
+          <p>端的に言えば、来店後の関係構築には、ほとんど投資していません。</p>
+          <p>だから、<span class="text-white">新規を集める、クーポンを出す、また比較される</span>、を繰り返してしまいます。</p>
+          <p class="pt-2 text-white font-medium">
+            Rism Japanは、来店後のLINE導線を設計し、<br class="hidden sm:block"/>“また来たくなる流れ”を作ります。
+          </p>
+        </div>
+
+        <!-- broken cycle visual -->
+        <div class="mt-10 grid grid-cols-3 gap-2 sm:gap-4 max-w-lg">
+          <div class="border border-white/15 rounded-lg px-2 py-3 text-center">
+            <div class="text-[9px] sm:text-[10px] tracking-[0.18em] text-white/50">01</div>
+            <div class="text-[11px] sm:text-[12.5px] text-white/90 mt-1">新規集客</div>
+          </div>
+          <div class="border border-white/15 rounded-lg px-2 py-3 text-center">
+            <div class="text-[9px] sm:text-[10px] tracking-[0.18em] text-white/50">02</div>
+            <div class="text-[11px] sm:text-[12.5px] text-white/90 mt-1">クーポン</div>
+          </div>
+          <div class="border border-gold/60 rounded-lg px-2 py-3 text-center bg-gold/10">
+            <div class="text-[9px] sm:text-[10px] tracking-[0.18em] text-gold">03</div>
+            <div class="text-[11px] sm:text-[12.5px] text-white mt-1">また比較</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────── 4. SOLUTION / FLOW ─────────────────────────── -->
+  <section class="py-20 sm:py-28 bg-paper border-y border-line">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="max-w-3xl">
+        <p class="text-[11px] sm:text-[12px] tracking-[0.32em] text-gold mb-5">SOLUTION <span class="vbar"></span> 解決策</p>
+        <h2 class="font-display text-[22px] leading-[1.6] sm:text-[32px] sm:leading-[1.5] font-bold text-ink">
+          Rism Japanが作るのは、LINEではありません。<br/><span class="text-gold">“顧客教育導線”</span>です。
+        </h2>
+      </div>
+
+      <!-- Flow Map -->
+      <div class="mt-12 sm:mt-16">
+        <div class="grid lg:grid-cols-3 gap-6 sm:gap-8">
+          <!-- STEP 1 -->
+          <div class="relative">
+            <div class="flex items-center gap-3 mb-5">
+              <span class="num-chip inline-flex items-center justify-center w-9 h-9 rounded-full bg-ink text-white text-[12px] font-semibold">01</span>
+              <span class="text-[11px] tracking-[0.22em] text-mute">DAY 0 – DAY 1</span>
+            </div>
+            <div class="space-y-3">
+              <div class="flow-node bg-white border border-line rounded-xl px-4 py-3.5 flex items-center gap-3">
+                <span class="w-8 h-8 rounded-md bg-base flex items-center justify-center text-ink">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 11l9-7 9 7v9a2 2 0 0 1-2 2h-4v-7H9v7H5a2 2 0 0 1-2-2v-9z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                </span>
+                <span class="text-[13px] sm:text-[14px] text-ink font-medium">Hot Pepper</span>
+              </div>
+              <div class="flex justify-center text-line2">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="flow-node bg-white border border-line rounded-xl px-4 py-3.5 flex items-center gap-3">
+                <span class="w-8 h-8 rounded-md bg-base flex items-center justify-center text-line_g">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 2.6 1.6 4.9 4 6.4-.1.9-.5 2.5-.6 2.9 0 .2.1.4.4.3.2 0 2.3-1.5 3.2-2.1.9.2 2 .3 3 .3 5.5 0 10-3.7 10-8.1S17.5 2 12 2z"/></svg>
+                </span>
+                <span class="text-[13px] sm:text-[14px] text-ink font-medium">LINE登録</span>
+              </div>
+              <div class="flex justify-center text-line2">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="flow-node bg-ink text-white border border-ink rounded-xl px-4 py-3.5 flex items-center gap-3">
+                <span class="w-8 h-8 rounded-md bg-white/10 flex items-center justify-center text-gold">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 8l-9 6-9-6M4 6h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                </span>
+                <span class="text-[13px] sm:text-[14px] font-medium">来店翌日フォロー</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bridge arrow desktop -->
+          <div class="hidden lg:flex absolute"></div>
+
+          <!-- STEP 2 -->
+          <div class="relative">
+            <div class="flex items-center gap-3 mb-5">
+              <span class="num-chip inline-flex items-center justify-center w-9 h-9 rounded-full bg-ink text-white text-[12px] font-semibold">02</span>
+              <span class="text-[11px] tracking-[0.22em] text-mute">DAY 7 – DAY 30</span>
+            </div>
+            <div class="space-y-3">
+              <div class="flow-node bg-white border border-line rounded-xl px-4 py-3.5 flex items-center gap-3">
+                <span class="w-8 h-8 rounded-md bg-base flex items-center justify-center text-ink">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M10 9l6 3-6 3V9z" fill="currentColor"/></svg>
+                </span>
+                <span class="text-[13px] sm:text-[14px] text-ink font-medium">ホームケア動画</span>
+              </div>
+              <div class="flex justify-center text-line2">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="flow-node bg-white border border-line rounded-xl px-4 py-3.5 flex items-center gap-3">
+                <span class="w-8 h-8 rounded-md bg-base flex items-center justify-center text-ink">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M3 9h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </span>
+                <span class="text-[13px] sm:text-[14px] text-ink font-medium">次回来店の目安</span>
+              </div>
+              <div class="flex justify-center text-line2">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="flow-node bg-ink text-white border border-ink rounded-xl px-4 py-3.5 flex items-center gap-3">
+                <span class="w-8 h-8 rounded-md bg-white/10 flex items-center justify-center text-gold">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <span class="text-[13px] sm:text-[14px] font-medium">再来店</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 3 -->
+          <div class="relative">
+            <div class="flex items-center gap-3 mb-5">
+              <span class="num-chip inline-flex items-center justify-center w-9 h-9 rounded-full bg-gold text-white text-[12px] font-semibold">03</span>
+              <span class="text-[11px] tracking-[0.22em] text-mute">DAY 30 – DAY 90</span>
+            </div>
+            <div class="space-y-3">
+              <div class="flow-node bg-white border border-line rounded-xl px-4 py-3.5 flex items-center gap-3">
+                <span class="w-8 h-8 rounded-md bg-base flex items-center justify-center text-ink">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6h15l-1.5 9H8L6 3H2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="20" r="1.5" fill="currentColor"/><circle cx="18" cy="20" r="1.5" fill="currentColor"/></svg>
+                </span>
+                <span class="text-[13px] sm:text-[14px] text-ink font-medium">店販提案</span>
+              </div>
+              <div class="flex justify-center text-line2">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="flow-node rounded-xl px-4 py-3.5 flex items-center gap-3"
+                   style="background:linear-gradient(180deg,#C9A977 0%,#A8895A 100%);color:#fff;">
+                <span class="w-8 h-8 rounded-md bg-white/15 flex items-center justify-center">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.6 6.3L21 9l-5 4.6L17.2 21 12 17.5 6.8 21 8 13.6 3 9l6.4-.7L12 2z"/></svg>
+                </span>
+                <span class="text-[13px] sm:text-[14px] font-semibold tracking-[0.04em]">ファン化</span>
+              </div>
+              <!-- spacer to align heights -->
+              <div class="invisible flex justify-center"><svg width="18" height="18"></svg></div>
+              <div class="invisible bg-white border border-line rounded-xl px-4 py-3.5 flex items-center gap-3 h-[58px]"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Narrative under flow -->
+      <div class="mt-14 sm:mt-20 max-w-3xl mx-auto">
+        <div class="bg-base border border-line rounded-2xl p-6 sm:p-10">
+          <div class="space-y-4 text-[14px] sm:text-[15px] leading-[2.1] text-ink2">
+            <p>例えば、<span class="text-ink font-medium">カラー施術後</span>には、色持ちを良くするケア動画。</p>
+            <p><span class="text-ink font-medium">7日後</span>には、自宅でのスタイリング動画。</p>
+            <p><span class="text-ink font-medium">30日後</span>には、次回来店の目安。</p>
+            <p><span class="text-ink font-medium">90日後</span>には、自然な再来店フォロー。</p>
+            <div class="hairline my-2"></div>
+            <p class="text-ink font-medium">
+              LINEを、ただのお知らせツールではなく、<br class="hidden sm:block"/>“関係性を育てる場所”へ変えます。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────── 5. CORE DIFFERENTIATION (動画) ─────────────────────────── -->
+  <section class="py-20 sm:py-28">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+        <div class="lg:col-span-6">
+          <p class="text-[11px] sm:text-[12px] tracking-[0.32em] text-gold mb-5">DIFFERENTIATION <span class="vbar"></span> 動画差別化</p>
+          <h2 class="font-display text-[22px] leading-[1.6] sm:text-[32px] sm:leading-[1.5] font-bold text-ink">
+            美容は、“読む”より、<br/><span class="relative">
+              “見る”が伝わる。
+              <span class="absolute left-0 right-0 -bottom-1 h-[6px] bg-goldLt/70 -z-10 rounded-sm"></span>
+            </span>
+          </h2>
+
+          <div class="mt-8 space-y-4 text-[14px] sm:text-[15px] leading-[2.1] text-ink2/90">
+            <p>ヘアオイルの量。ドライヤーの当て方。スタイリング。ホームケア。</p>
+            <p>これらは、文章では伝わらない領域です。</p>
+            <p>だからRism Japanは、<span class="text-ink font-semibold">LINE構築だけでなく、“伝わる動画”まで制作</span>します。</p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6">
+          <div class="bg-paper border border-line rounded-2xl overflow-hidden">
+            <div class="divide-y divide-line">
+              <!-- item -->
+              <div class="flex items-start gap-4 px-5 sm:px-7 py-5">
+                <div class="shrink-0 w-10 h-10 rounded-full bg-base flex items-center justify-center text-ink">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2c-3 5-3 9 0 12s3 7 0 8c5-1 8-4 8-9 0-4-3-8-8-11z" fill="currentColor"/></svg>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-[10px] tracking-[0.22em] text-mute2">VIDEO 01</div>
+                  <div class="text-[14px] sm:text-[15px] text-ink font-medium mt-0.5">ヘアオイルの“量”</div>
+                  <div class="text-[12px] text-mute mt-1">使いすぎ・足りなさをビジュアルで解決</div>
+                </div>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" class="text-gold mt-1" aria-hidden="true"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="flex items-start gap-4 px-5 sm:px-7 py-5">
+                <div class="shrink-0 w-10 h-10 rounded-full bg-base flex items-center justify-center text-ink">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 3l2 4-2 4M9 6h7M5 14a4 4 0 0 1 4-4h7v8H9a4 4 0 0 1-4-4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-[10px] tracking-[0.22em] text-mute2">VIDEO 02</div>
+                  <div class="text-[14px] sm:text-[15px] text-ink font-medium mt-0.5">ドライヤーの当て方</div>
+                  <div class="text-[12px] text-mute mt-1">角度・距離・順序を1分で理解</div>
+                </div>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" class="text-gold mt-1" aria-hidden="true"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="flex items-start gap-4 px-5 sm:px-7 py-5">
+                <div class="shrink-0 w-10 h-10 rounded-full bg-base flex items-center justify-center text-ink">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-[10px] tracking-[0.22em] text-mute2">VIDEO 03</div>
+                  <div class="text-[14px] sm:text-[15px] text-ink font-medium mt-0.5">スタイリング</div>
+                  <div class="text-[12px] text-mute mt-1">朝5分で“サロン仕上がり”を再現</div>
+                </div>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" class="text-gold mt-1" aria-hidden="true"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="flex items-start gap-4 px-5 sm:px-7 py-5">
+                <div class="shrink-0 w-10 h-10 rounded-full bg-base flex items-center justify-center text-ink">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M6 7v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7M9 7V4h6v3" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-[10px] tracking-[0.22em] text-mute2">VIDEO 04</div>
+                  <div class="text-[14px] sm:text-[15px] text-ink font-medium mt-0.5">ホームケア</div>
+                  <div class="text-[12px] text-mute mt-1">毎日の習慣化までを動画で設計</div>
+                </div>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" class="text-gold mt-1" aria-hidden="true"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────── 6. OFFER / MONITOR ─────────────────────────── -->
+  <section class="py-20 sm:py-28 bg-paper border-y border-line">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8">
+      <div class="text-center max-w-3xl mx-auto">
+        <p class="text-[11px] sm:text-[12px] tracking-[0.32em] text-gold mb-5">OFFER <span class="vbar"></span> モニター募集</p>
+        <h2 class="font-display text-[22px] leading-[1.6] sm:text-[32px] sm:leading-[1.5] font-bold text-ink">
+          現在、<span class="text-gold">3社限定</span>で<br class="sm:hidden"/>初期パートナーを募集しています。
+        </h2>
+        <div class="mt-8 text-[14px] sm:text-[15px] leading-[2.1] text-ink2/90 space-y-4 text-left sm:text-center">
+          <p>Rism Japanは現在、美容サロン向け「来店後マーケティング」の初期パートナーを募集しています。</p>
+          <p>今回のモニターでは、<span class="text-ink font-medium">LINE導線設計、Lステップ構築、再来店導線、店販導線、動画企画</span>まで、通常より深く伴走します。</p>
+          <p>その代わり、導入事例掲載、インタビュー、改善データ共有へのご協力をお願いしています。</p>
+        </div>
+      </div>
+
+      <!-- Benefits grid -->
+      <div class="mt-14 sm:mt-16">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4">
+          <!-- 1 -->
+          <div class="group relative bg-base rounded-2xl border border-line p-5 sm:p-6 hover:border-gold transition-colors">
+            <div class="flex items-center justify-between">
+              <span class="num-chip text-[10px] tracking-[0.2em] text-gold">BENEFIT&nbsp;01</span>
+              <span class="w-7 h-7 rounded-full bg-ink text-white flex items-center justify-center">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 1v22M5 8h8a4 4 0 0 1 0 8H5l3 3M19 8l-3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </div>
+            <div class="mt-5 text-[15px] sm:text-[15.5px] font-semibold text-ink leading-[1.7]">初期費用<br/>特別価格</div>
+            <div class="mt-2 text-[11.5px] text-mute leading-[1.7]">モニター限定で、通常の導入費用を大幅に圧縮します。</div>
+          </div>
+          <!-- 2 -->
+          <div class="group relative bg-base rounded-2xl border border-line p-5 sm:p-6 hover:border-gold transition-colors">
+            <div class="flex items-center justify-between">
+              <span class="num-chip text-[10px] tracking-[0.2em] text-gold">BENEFIT&nbsp;02</span>
+              <span class="w-7 h-7 rounded-full bg-ink text-white flex items-center justify-center">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.6"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </span>
+            </div>
+            <div class="mt-5 text-[15px] sm:text-[15.5px] font-semibold text-ink leading-[1.7]">再来店導線<br/>診断</div>
+            <div class="mt-2 text-[11.5px] text-mute leading-[1.7]">現状のリピートが伸びない原因を構造で可視化。</div>
+          </div>
+          <!-- 3 -->
+          <div class="group relative bg-base rounded-2xl border border-line p-5 sm:p-6 hover:border-gold transition-colors">
+            <div class="flex items-center justify-between">
+              <span class="num-chip text-[10px] tracking-[0.2em] text-gold">BENEFIT&nbsp;03</span>
+              <span class="w-7 h-7 rounded-full bg-ink text-white flex items-center justify-center">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 2.6 1.6 4.9 4 6.4-.1.9-.5 2.5-.6 2.9 0 .2.1.4.4.3.2 0 2.3-1.5 3.2-2.1.9.2 2 .3 3 .3 5.5 0 10-3.7 10-8.1S17.5 2 12 2z"/></svg>
+              </span>
+            </div>
+            <div class="mt-5 text-[15px] sm:text-[15.5px] font-semibold text-ink leading-[1.7]">LINE<br/>改善提案</div>
+            <div class="mt-2 text-[11.5px] text-mute leading-[1.7]">配信設計から自動化まで、改善ポイントを具体提案。</div>
+          </div>
+          <!-- 4 -->
+          <div class="group relative bg-base rounded-2xl border border-line p-5 sm:p-6 hover:border-gold transition-colors">
+            <div class="flex items-center justify-between">
+              <span class="num-chip text-[10px] tracking-[0.2em] text-gold">BENEFIT&nbsp;04</span>
+              <span class="w-7 h-7 rounded-full bg-ink text-white flex items-center justify-center">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M10 9l6 3-6 3V9z" fill="currentColor"/></svg>
+              </span>
+            </div>
+            <div class="mt-5 text-[15px] sm:text-[15.5px] font-semibold text-ink leading-[1.7]">動画企画<br/>サポート</div>
+            <div class="mt-2 text-[11.5px] text-mute leading-[1.7]">伝わる構成・尺・撮り方までを一緒に組み立てます。</div>
+          </div>
+          <!-- 5 -->
+          <div class="group relative bg-base rounded-2xl border border-line p-5 sm:p-6 hover:border-gold transition-colors">
+            <div class="flex items-center justify-between">
+              <span class="num-chip text-[10px] tracking-[0.2em] text-gold">BENEFIT&nbsp;05</span>
+              <span class="w-7 h-7 rounded-full bg-ink text-white flex items-center justify-center">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M21 4v5h-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </div>
+            <div class="mt-5 text-[15px] sm:text-[15.5px] font-semibold text-ink leading-[1.7]">運用改善<br/>フィードバック</div>
+            <div class="mt-2 text-[11.5px] text-mute leading-[1.7]">数値と現場感の両面から、継続的に改善を回します。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 sm:mt-14 text-center">
+        <a href="#form"
+           class="cta-primary inline-flex items-center justify-center gap-3 px-8 sm:px-12 py-4 sm:py-5 rounded-full text-white text-[14px] sm:text-[15px] tracking-[0.16em]"
+           aria-label="無料診断・オンライン面談を予約する（フォームへ移動）">
+          【無料診断・オンライン面談を予約する】
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────── 7. SCARCITY (なぜ3社限定なのか) ─────────────────────────── -->
+  <section class="py-20 sm:py-28">
+    <div class="max-w-4xl mx-auto px-5 sm:px-8">
+      <p class="text-[11px] sm:text-[12px] tracking-[0.32em] text-gold mb-6 text-center">SCARCITY <span class="vbar"></span> なぜ3社限定なのか</p>
+
+      <figure class="relative bg-paper border border-line rounded-2xl sm:rounded-[28px] p-8 sm:p-14">
+        <span aria-hidden="true" class="absolute -top-5 left-6 sm:-top-7 sm:left-10 text-gold/60 select-none"
+              style="font-size:90px;line-height:1;font-family:Georgia,serif;">“</span>
+
+        <blockquote class="text-[15px] sm:text-[18px] leading-[2.1] sm:leading-[2.2] text-ink2 space-y-5 sm:space-y-6 font-medium">
+          <p>Rism Japanは、テンプレートを大量導入する会社ではありません。</p>
+          <p>サロンごとの<span class="text-ink font-semibold">客層、強み、再来周期、店販、メニュー</span>に合わせて、導線を設計しています。</p>
+          <p>だからこそ、最初から大量受注はしません。</p>
+          <p class="text-ink">まずは<span class="text-gold font-semibold">3社限定</span>で、深く伴走しながら、<br class="hidden sm:block"/>成功事例を一緒に作りたいと考えています。</p>
+        </blockquote>
+
+        <figcaption class="mt-10 flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full bg-gradient-to-br from-goldLt to-gold flex items-center justify-center text-ink text-[11px] font-bold">RJ</div>
+          <div>
+            <div class="text-[12px] tracking-[0.16em] text-ink font-semibold">RISM JAPAN</div>
+            <div class="text-[10.5px] tracking-[0.16em] text-mute">— 初期パートナー募集 メッセージ</div>
+          </div>
+        </figcaption>
+      </figure>
+
+      <!-- counter strip -->
+      <div class="mt-10 grid grid-cols-3 gap-3 sm:gap-6 text-center">
+        <div class="bg-base border border-line rounded-xl py-5">
+          <div class="num-chip text-[22px] sm:text-[28px] font-bold text-ink leading-none">3</div>
+          <div class="mt-1 text-[10px] sm:text-[11px] tracking-[0.18em] text-mute">SALONS&nbsp;ONLY</div>
+        </div>
+        <div class="bg-base border border-line rounded-xl py-5">
+          <div class="num-chip text-[22px] sm:text-[28px] font-bold text-ink leading-none">90<span class="text-[12px] text-mute font-medium ml-1">days</span></div>
+          <div class="mt-1 text-[10px] sm:text-[11px] tracking-[0.18em] text-mute">DEEP&nbsp;PARTNER</div>
+        </div>
+        <div class="bg-base border border-line rounded-xl py-5">
+          <div class="num-chip text-[22px] sm:text-[28px] font-bold text-gold leading-none">1:1</div>
+          <div class="mt-1 text-[10px] sm:text-[11px] tracking-[0.18em] text-mute">CUSTOM&nbsp;DESIGN</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────── 8. AUTHORITY / TEAM ─────────────────────────── -->
+  <section class="py-20 sm:py-28 bg-ink text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.06]"
+         style="background-image:linear-gradient(rgba(255,255,255,.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.5) 1px, transparent 1px); background-size: 28px 28px;"></div>
+    <div class="absolute -top-40 -right-32 w-[420px] h-[420px] rounded-full"
+         style="background:radial-gradient(closest-side, rgba(184,153,104,0.22), transparent 70%);"></div>
+    <div class="absolute -bottom-40 -left-32 w-[460px] h-[460px] rounded-full"
+         style="background:radial-gradient(closest-side, rgba(124,139,125,0.22), transparent 70%);"></div>
+
+    <div class="max-w-5xl mx-auto px-5 sm:px-8 relative">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="inline-flex items-center gap-1.5 text-[10px] sm:text-[11px] tracking-[0.22em] text-gold">
+          <span class="w-6 h-px bg-gold"></span>
+          AUTHORITY <span class="vbar"></span> 若さを武器化する
+        </span>
+      </div>
+
+      <h2 class="font-display text-[22px] leading-[1.6] sm:text-[34px] sm:leading-[1.5] font-bold">
+        SNS・動画・LINEネイティブ世代だからこそ、<br/>作れる導線があります。
+      </h2>
+
+      <div class="grid lg:grid-cols-12 gap-10 mt-12">
+        <div class="lg:col-span-7 space-y-5 text-[14px] sm:text-[15px] leading-[2.1] text-white/85">
+          <p>今は、“来店して終わり”では関係は続きません。</p>
+          <p>ショート動画、LINE、来店後コミュニケーション。</p>
+          <p>
+            Rism Japanには、<span class="text-white font-semibold">シリコンバレーで学校に通うメンバーが2人</span>います。
+            そのうち1人は<span class="text-white font-semibold">8歳からアメリカで育ち</span>、現地のSNS・動画・テクノロジー文化に触れながら生活してきました。
+          </p>
+          <p>だからこそ、ただ若いだけではなく、海外のスピード感や、動画・LINE・SNSを前提とした顧客接点の作り方を自然に理解しています。</p>
+          <p>美容業界に必要なのは、昔ながらの一方的な配信ではなく、お客様の日常に自然に入り込むコミュニケーションです。</p>
+          <p class="text-white">
+            Rism Japanは、<span class="font-semibold text-gold">SNS・動画・LINEネイティブ世代の感覚</span>と、
+            <span class="font-semibold text-gold">シリコンバレーで培った時代感度</span>を活かして、
+            “今の顧客接点”を前提に導線を設計します。
+          </p>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl border border-white/15 bg-white/[0.03] backdrop-blur p-6 sm:p-7">
+            <div class="text-[10px] tracking-[0.24em] text-gold">TEAM SIGNAL</div>
+            <div class="mt-4 space-y-4">
+              <div class="flex items-start gap-3">
+                <div class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#E8D9BD" stroke-width="1.5"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18" stroke="#E8D9BD" stroke-width="1.5"/></svg>
+                </div>
+                <div>
+                  <div class="text-[13px] text-white font-medium">Silicon Valley</div>
+                  <div class="text-[11.5px] text-white/60 leading-[1.7] mt-0.5">現地で学ぶメンバー2名 / 1名は8歳から在米</div>
+                </div>
+              </div>
+              <div class="h-px bg-white/10"></div>
+              <div class="flex items-start gap-3">
+                <div class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#E8D9BD" stroke-width="1.5"/><path d="M10 9l6 3-6 3V9z" fill="#E8D9BD"/></svg>
+                </div>
+                <div>
+                  <div class="text-[13px] text-white font-medium">Short Video Native</div>
+                  <div class="text-[11.5px] text-white/60 leading-[1.7] mt-0.5">TikTok / Reels / Shorts 文化を生活軸で理解</div>
+                </div>
+              </div>
+              <div class="h-px bg-white/10"></div>
+              <div class="flex items-start gap-3">
+                <div class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="#E8D9BD" aria-hidden="true"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 2.6 1.6 4.9 4 6.4-.1.9-.5 2.5-.6 2.9 0 .2.1.4.4.3.2 0 2.3-1.5 3.2-2.1.9.2 2 .3 3 .3 5.5 0 10-3.7 10-8.1S17.5 2 12 2z"/></svg>
+                </div>
+                <div>
+                  <div class="text-[13px] text-white font-medium">LINE × Lstep Design</div>
+                  <div class="text-[11.5px] text-white/60 leading-[1.7] mt-0.5">日本の顧客接点に合わせた導線設計</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────── 9. CONVERSION OFFER / FORM ─────────────────────────── -->
+  <section id="form" class="py-20 sm:py-28 bg-base">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8">
+      <div class="text-center max-w-3xl mx-auto">
+        <p class="text-[11px] sm:text-[12px] tracking-[0.32em] text-gold mb-5">FREE DIAGNOSIS <span class="vbar"></span> 無料診断</p>
+        <h2 class="font-display text-[22px] leading-[1.6] sm:text-[32px] sm:leading-[1.5] font-bold text-ink">
+          ありがちな“無料相談”ではなく、<br class="sm:hidden"/><span class="text-gold">“再来店導線”の構造診断</span>です。
+        </h2>
+        <p class="mt-5 text-[13px] sm:text-[14px] text-mute leading-[2]">
+          モニター契約は伴いません。サロンの現状を構造で見える化し、改善ポイントを整理してお渡しします。
+        </p>
+      </div>
+
+      <div class="mt-12 grid lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+        <!-- Diagnostic items -->
+        <div class="lg:col-span-5">
+          <div class="bg-paper border border-line rounded-2xl p-6 sm:p-8">
+            <div class="text-[11px] tracking-[0.22em] text-mute2 mb-5">診断でわかること</div>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <span class="shrink-0 mt-0.5 w-6 h-6 rounded-full bg-ink text-gold flex items-center justify-center">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <span class="text-[13.5px] sm:text-[14px] text-ink2 leading-[1.9]">なぜ2回目につながらないのか</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="shrink-0 mt-0.5 w-6 h-6 rounded-full bg-ink text-gold flex items-center justify-center">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <span class="text-[13.5px] sm:text-[14px] text-ink2 leading-[1.9]">LINEが止まる原因</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="shrink-0 mt-0.5 w-6 h-6 rounded-full bg-ink text-gold flex items-center justify-center">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <span class="text-[13.5px] sm:text-[14px] text-ink2 leading-[1.9]">店販が伸びない理由</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="shrink-0 mt-0.5 w-6 h-6 rounded-full bg-ink text-gold flex items-center justify-center">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <span class="text-[13.5px] sm:text-[14px] text-ink2 leading-[1.9]">来店後に送るべき内容</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="shrink-0 mt-0.5 w-6 h-6 rounded-full bg-ink text-gold flex items-center justify-center">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <span class="text-[13.5px] sm:text-[14px] text-ink2 leading-[1.9]">自動化できるポイント</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="shrink-0 mt-0.5 w-6 h-6 rounded-full bg-ink text-gold flex items-center justify-center">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <span class="text-[13.5px] sm:text-[14px] text-ink2 leading-[1.9]">Hot Pepper依存を減らす方法</span>
+              </li>
+            </ul>
+            <div class="hairline my-6"></div>
+            <div class="flex items-center gap-3 text-[11px] text-mute">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2" stroke="#7C8B7D" stroke-width="1.6"/><path d="M8 10V7a4 4 0 1 1 8 0v3" stroke="#7C8B7D" stroke-width="1.6"/></svg>
+              入力情報は診断目的でのみ使用します。
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Card -->
+        <div class="lg:col-span-7">
+          <form
+            class="bg-paper border border-line rounded-2xl p-6 sm:p-8 shadow-[0_30px_60px_-30px_rgba(15,23,42,0.18)]"
+            onsubmit="event.preventDefault(); this.querySelector('button[type=submit]').setAttribute('aria-busy','true'); setTimeout(()=>{ this.style.display='none'; document.getElementById('thanks').classList.remove('hidden'); window.scrollTo({top: document.getElementById('thanks').offsetTop - 80, behavior:'smooth'}); }, 400);"
+            aria-label="3社限定モニター申し込みフォーム">
+
+            <div class="flex items-center justify-between mb-6">
+              <div class="text-[11px] tracking-[0.22em] text-mute2">APPLICATION FORM</div>
+              <div class="text-[11px] tracking-[0.16em] text-gold">所要時間 約60秒</div>
+            </div>
+
+            <!-- Salon -->
+            <div class="mb-5">
+              <label for="salon" class="block text-[12.5px] text-ink font-medium mb-2 tracking-[0.06em]">
+                サロン名 <span class="text-gold ml-1">*</span>
+              </label>
+              <input id="salon" name="salon" type="text" required
+                     placeholder="例：Rism Hair &amp; Make"
+                     class="field w-full bg-base border border-line rounded-lg px-4 py-3.5 text-[14px] text-ink placeholder:text-mute2/70"/>
+            </div>
+
+            <!-- Contact -->
+            <div class="mb-5">
+              <label for="contact" class="block text-[12.5px] text-ink font-medium mb-2 tracking-[0.06em]">
+                ご担当者氏名 <span class="text-gold ml-1">*</span>
+              </label>
+              <input id="contact" name="contact" type="text" required
+                     placeholder="例：山田 花子"
+                     class="field w-full bg-base border border-line rounded-lg px-4 py-3.5 text-[14px] text-ink placeholder:text-mute2/70"/>
+            </div>
+
+            <!-- Email -->
+            <div class="mb-5">
+              <label for="email" class="block text-[12.5px] text-ink font-medium mb-2 tracking-[0.06em]">
+                メールアドレス <span class="text-gold ml-1">*</span>
+              </label>
+              <input id="email" name="email" type="email" required inputmode="email" autocomplete="email"
+                     placeholder="name@salon.jp"
+                     class="field w-full bg-base border border-line rounded-lg px-4 py-3.5 text-[14px] text-ink placeholder:text-mute2/70"/>
+            </div>
+
+            <!-- LINE usage -->
+            <fieldset class="mb-6">
+              <legend class="block text-[12.5px] text-ink font-medium mb-2 tracking-[0.06em]">
+                現在のLINE運用の有無 <span class="text-gold ml-1">*</span>
+              </legend>
+              <div class="grid grid-cols-2 gap-3">
+                <label class="radio-card cursor-pointer flex items-center justify-center gap-2 bg-base border border-line rounded-lg px-4 py-3.5 text-[13.5px] text-ink2">
+                  <input type="radio" name="line_usage" value="yes" class="sr-only" required/>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  はい（運用中）
+                </label>
+                <label class="radio-card cursor-pointer flex items-center justify-center gap-2 bg-base border border-line rounded-lg px-4 py-3.5 text-[13.5px] text-ink2">
+                  <input type="radio" name="line_usage" value="no" class="sr-only"/>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                  いいえ（未運用）
+                </label>
+              </div>
+            </fieldset>
+
+            <!-- Consent -->
+            <label class="flex items-start gap-2.5 mb-6 cursor-pointer">
+              <input type="checkbox" required class="mt-1 accent-ink"/>
+              <span class="text-[11.5px] text-mute leading-[1.7]">
+                プライバシーポリシーに同意の上、診断申込内容を送信します。
+              </span>
+            </label>
+
+            <!-- Submit -->
+            <button type="submit"
+                    class="cta-gold w-full inline-flex items-center justify-center gap-3 px-6 py-4 sm:py-5 rounded-full text-white text-[14px] sm:text-[15px] tracking-[0.16em] font-medium"
+                    aria-label="無料診断・オンライン面談を予約する">
+              【無料診断・オンライン面談を予約する】
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+
+            <p class="mt-4 text-center text-[11px] text-mute tracking-[0.06em]">
+              ご入力から1〜2営業日以内に、担当者よりご連絡いたします。
+            </p>
+          </form>
+
+          <!-- Thanks state -->
+          <div id="thanks" class="hidden mt-2 bg-paper border border-line rounded-2xl p-8 text-center">
+            <div class="w-12 h-12 rounded-full bg-ink text-gold mx-auto flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="mt-5 text-[16px] font-semibold text-ink">お申し込みありがとうございます。</div>
+            <div class="mt-2 text-[13px] text-mute">担当者より、1〜2営業日以内にご連絡いたします。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────── 10. LAST CTA ─────────────────────────── -->
+  <section class="relative bg-ink text-white py-20 sm:py-28 overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.08]"
+         style="background-image:linear-gradient(rgba(255,255,255,.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.5) 1px, transparent 1px); background-size: 36px 36px;"></div>
+    <div class="absolute -top-40 -left-32 w-[500px] h-[500px] rounded-full"
+         style="background:radial-gradient(closest-side, rgba(184,153,104,0.28), transparent 70%);"></div>
+    <div class="absolute -bottom-40 -right-32 w-[460px] h-[460px] rounded-full"
+         style="background:radial-gradient(closest-side, rgba(124,139,125,0.22), transparent 70%);"></div>
+
+    <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center relative">
+      <p class="text-[11px] sm:text-[12px] tracking-[0.32em] text-gold mb-6">FINAL <span class="vbar"></span> ラストCTA</p>
+
+      <h2 class="font-display text-[24px] leading-[1.55] sm:text-[38px] sm:leading-[1.45] font-bold">
+        集客して終わりにするか。<br/>
+        <span class="text-gold">来店後まで設計するか。</span>
+      </h2>
+
+      <div class="hairline-dark my-10 max-w-md mx-auto"></div>
+
+      <div class="space-y-5 text-[14px] sm:text-[15.5px] leading-[2.1] text-white/85 max-w-2xl mx-auto">
+        <p>お客様は、施術が終わった瞬間から、少しずつサロンを忘れていきます。</p>
+        <p>だから必要なのは、<span class="text-white font-semibold">“来店後の接点”</span>です。</p>
+        <p>Rism Japanは、<span class="text-white font-semibold">LINEと動画で、また来たくなる理由</span>を届けます。</p>
+        <p>まずは、3社限定の初期パートナーとして、<br class="hidden sm:block"/>あなたのサロンの導線を一緒に整理しませんか？</p>
+      </div>
+
+      <div class="mt-12">
+        <a href="#form"
+           class="cta-gold inline-flex w-full sm:w-auto items-center justify-center gap-3 px-8 sm:px-12 py-4 sm:py-5 rounded-full text-white text-[14px] sm:text-[15px] tracking-[0.16em] font-medium"
+           aria-label="無料診断・オンライン面談を予約する（フォームへ移動）">
+          【無料診断・オンライン面談を予約する】
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <p class="mt-5 text-[11px] sm:text-[12px] tracking-[0.14em] text-white/55">
+          ※残り枠は3社のみ。締切次第、受付を停止します。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────── Footer ─────────────────────────── -->
+  <footer class="bg-ink text-white/70 border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
+      <div class="flex items-center gap-2.5">
+        <span class="inline-block w-2 h-2 rounded-full bg-gold"></span>
+        <span class="text-[12px] tracking-[0.22em] text-white">RISM&nbsp;JAPAN</span>
+      </div>
+      <div class="text-[11px] tracking-[0.14em] text-white/50">
+        © Rism Japan. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─────────────────────────── Mobile Sticky CTA ─────────────────────────── -->
+  <div class="fixed inset-x-0 bottom-0 z-40 sm:hidden pointer-events-none">
+    <div class="px-3 pb-3 pointer-events-auto">
+      <a href="#form"
+         class="cta-primary w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full text-white text-[13px] tracking-[0.14em] font-medium"
+         aria-label="無料診断・オンライン面談を予約する">
+        【無料診断・オンライン面談を予約する】
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="h-16 sm:hidden"></div>
+
+  <!-- Reveal on scroll -->
+  <script>
+    (function(){
+      const els = document.querySelectorAll('section h2, section .flow-node, section figure, section form, section ul');
+      els.forEach(e => e.classList.add('reveal'));
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(en=>{
+          if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+        });
+      },{threshold:0.12});
+      els.forEach(e=>io.observe(e));
+    })();
+  </script>
+
+</body>
+</html>
