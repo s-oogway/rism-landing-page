@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#0F172A" />
+  <meta name="theme-color" content="#1E2939" />
   <title>Rism Japan ｜ 3社限定モニター｜無料再来店導線診断</title>
   <meta name="description" content="新規集客を続けても、リピートは増えません。Rism Japanは、LINE × 動画 × Lステップで、また来たくなる理由を作ります。3社限定で初期パートナーを募集中。" />
   <meta name="format-detection" content="telephone=no" />
@@ -13,19 +13,25 @@
       theme: {
         extend: {
           colors: {
-            base:    '#F9FAFB',
-            paper:   '#FFFFFF',
-            ink:     '#0F172A',
-            ink2:    '#1E293B',
-            mute:    '#475569',
-            mute2:   '#64748B',
-            line:    '#E5E7EB',
-            line2:   '#CBD5E1',
-            gold:    '#B89968',
-            goldDk:  '#9A7E54',
-            goldLt:  '#E8D9BD',
-            sage:    '#7C8B7D',
-            line_g:  '#06C755'
+            base:        '#F9FAFB',
+            paper:       '#FFFFFF',
+            ink:         '#1E2939',
+            ink2:        '#364153',
+            mute:        '#4A5565',
+            mute2:       '#6A7282',
+            line:        '#E5E7EB',
+            line2:       '#D1D5DC',
+            gold:        '#B89968',
+            goldDk:      '#9A7E54',
+            goldLt:      '#E8D9BD',
+            brandBlue:   '#2563EB',
+            brandBlueDk: '#1D4ED8',
+            brandBlueLt: '#EFF6FF',
+            brandEm:     '#10B981',
+            brandEmDk:   '#059669',
+            brandEmLt:   '#ECFDF5',
+            sage:        '#7C8B7D',
+            line_g:      '#06C755'
           },
           fontFamily: {
             jp: ['"Yu Gothic"','YuGothic','"Hiragino Kaku Gothic ProN"','"Hiragino Sans"','"Noto Sans JP"','-apple-system','BlinkMacSystemFont','"Segoe UI"','sans-serif']
@@ -56,22 +62,22 @@
     .vbar{
       display:inline-block;width:1px;height:0.9em;background:currentColor;opacity:.4;margin:0 .55em;vertical-align:-0.05em;
     }
-    .hairline{ height:1px; background:linear-gradient(90deg, transparent, #CBD5E1, transparent); }
+    .hairline{ height:1px; background:linear-gradient(90deg, transparent, #D1D5DC, transparent); }
     .hairline-dark{ height:1px; background:linear-gradient(90deg, transparent, rgba(232,217,189,.5), transparent); }
     .grain{
       background-image:
-        radial-gradient(rgba(15,23,42,0.025) 1px, transparent 1px);
+        radial-gradient(rgba(30,41,57,0.025) 1px, transparent 1px);
       background-size: 4px 4px;
     }
     /* CTA */
     .cta-primary{
-      background:linear-gradient(180deg,#1E293B 0%,#0F172A 100%);
-      box-shadow:0 1px 0 rgba(255,255,255,.06) inset, 0 10px 24px -10px rgba(15,23,42,.45);
+      background:linear-gradient(180deg,#364153 0%,#1E2939 100%);
+      box-shadow:0 1px 0 rgba(255,255,255,.06) inset, 0 10px 24px -10px rgba(30,41,57,.45);
       transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
     }
     .cta-primary:hover{
       transform:translateY(-1px);
-      box-shadow:0 1px 0 rgba(255,255,255,.08) inset, 0 16px 30px -10px rgba(15,23,42,.55);
+      box-shadow:0 1px 0 rgba(255,255,255,.08) inset, 0 16px 30px -10px rgba(30,41,57,.55);
     }
     .cta-primary:active{ transform:translateY(0); }
     .cta-gold{
@@ -90,43 +96,43 @@
     }
     .field:focus{
       outline:none;
-      border-color:#0F172A;
-      box-shadow:0 0 0 4px rgba(15,23,42,.08);
+      border-color:#1E2939;
+      box-shadow:0 0 0 4px rgba(30,41,57,.08);
       background:#FFFFFF;
     }
     .radio-card{
       transition: border-color .2s ease, background .2s ease, box-shadow .2s ease;
     }
     .radio-card:has(input:checked){
-      border-color:#0F172A;
-      background:#0F172A;
+      border-color:#1E2939;
+      background:#1E2939;
       color:#fff;
-      box-shadow:0 6px 20px -10px rgba(15,23,42,.5);
+      box-shadow:0 6px 20px -10px rgba(30,41,57,.5);
     }
     /* phone mockup */
     .device{
       box-shadow:
         0 1px 0 rgba(255,255,255,.5) inset,
-        0 30px 60px -20px rgba(15,23,42,.35),
-        0 10px 30px -15px rgba(15,23,42,.25);
+        0 30px 60px -20px rgba(30,41,57,.35),
+        0 10px 30px -15px rgba(30,41,57,.25);
     }
     .device-screen{
       background:
         radial-gradient(120% 60% at 50% 0%, #EAF6EE 0%, #F7FAF8 35%, #FFFFFF 70%);
     }
     .chat-bubble{
-      box-shadow:0 1px 2px rgba(15,23,42,.06);
+      box-shadow:0 1px 2px rgba(30,41,57,.06);
     }
     .video-shimmer{
       background:
-        linear-gradient(135deg, #0F172A 0%, #1E293B 55%, #334155 100%);
+        linear-gradient(135deg, #1E2939 0%, #364153 55%, #4A5565 100%);
       position:relative; overflow:hidden;
     }
     .video-shimmer::after{
       content:""; position:absolute; inset:0;
       background:
-        radial-gradient(60% 60% at 30% 30%, rgba(184,153,104,.18), transparent 60%),
-        radial-gradient(60% 60% at 70% 70%, rgba(124,139,125,.22), transparent 60%);
+        radial-gradient(60% 60% at 30% 30%, rgba(37,99,235,.22), transparent 60%),
+        radial-gradient(60% 60% at 70% 70%, rgba(16,185,129,.24), transparent 60%);
     }
     /* Flow */
     .flow-node{
@@ -134,7 +140,7 @@
     }
     .flow-node:hover{
       transform: translateY(-2px);
-      box-shadow: 0 14px 30px -18px rgba(15,23,42,.35);
+      box-shadow: 0 14px 30px -18px rgba(30,41,57,.35);
     }
     .num-chip{
       font-feature-settings:"tnum" 1;
@@ -146,7 +152,7 @@
       .reveal.in{ opacity:1; transform:none; }
     }
     /* selection */
-    ::selection{ background:#0F172A; color:#fff; }
+    ::selection{ background:#1E2939; color:#fff; }
   </style>
 </head>
 <body class="bg-base text-ink font-jp antialiased">
@@ -179,7 +185,7 @@
     <div class="absolute -top-32 -right-32 w-[420px] h-[420px] rounded-full -z-10"
          style="background:radial-gradient(closest-side, rgba(184,153,104,0.18), transparent 70%);"></div>
     <div class="absolute -bottom-40 -left-40 w-[480px] h-[480px] rounded-full -z-10"
-         style="background:radial-gradient(closest-side, rgba(15,23,42,0.08), transparent 70%);"></div>
+         style="background:radial-gradient(closest-side, rgba(16,185,129,0.12), transparent 70%);"></div>
 
     <div class="max-w-6xl mx-auto px-5 sm:px-8 pt-10 sm:pt-16 pb-14 sm:pb-24">
       <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
@@ -271,7 +277,7 @@
                   <button aria-label="戻る" class="text-ink/70">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   </button>
-                  <div class="w-7 h-7 rounded-full bg-gradient-to-br from-goldLt to-gold flex items-center justify-center text-ink text-[10px] font-bold">RJ</div>
+                  <div class="w-7 h-7 rounded-full bg-gradient-to-br from-brandBlue to-brandEm flex items-center justify-center text-white text-[10px] font-bold">RJ</div>
                   <div class="flex-1 min-w-0">
                     <div class="text-[11px] font-semibold text-ink truncate">Salon Official</div>
                     <div class="text-[9px] text-mute">オンライン</div>
@@ -287,7 +293,7 @@
 
                   <!-- incoming bubble -->
                   <div class="flex items-end gap-1.5">
-                    <div class="w-5 h-5 rounded-full bg-gradient-to-br from-goldLt to-gold shrink-0"></div>
+                    <div class="w-5 h-5 rounded-full bg-gradient-to-br from-brandBlue to-brandEm shrink-0"></div>
                     <div class="chat-bubble bg-white border border-line/70 rounded-2xl rounded-bl-md px-3 py-2 max-w-[180px]">
                       <div class="text-[10px] text-ink leading-[1.6]">本日はご来店ありがとうございました。<br/>カラーの色持ちを良くする動画をお送りします◎</div>
                     </div>
@@ -299,7 +305,7 @@
                     <div class="chat-bubble bg-white border border-line/70 rounded-2xl rounded-bl-md p-1.5 max-w-[200px]">
                       <div class="video-shimmer rounded-xl aspect-[16/10] flex items-center justify-center">
                         <button aria-label="動画を再生" class="w-9 h-9 rounded-full bg-white/95 flex items-center justify-center shadow-md">
-                          <svg width="12" height="12" viewBox="0 0 24 24" fill="#0F172A" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                          <svg width="12" height="12" viewBox="0 0 24 24" fill="#1E2939" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
                         </button>
                       </div>
                       <div class="px-1.5 pt-1.5 pb-1">
@@ -377,10 +383,10 @@
   <section class="pb-20 sm:pb-28">
     <div class="max-w-5xl mx-auto px-5 sm:px-8">
       <div class="relative rounded-2xl sm:rounded-[28px] bg-ink text-white p-7 sm:p-14 overflow-hidden">
-        <div class="absolute -top-24 -right-24 w-[320px] h-[320px] rounded-full opacity-50"
-             style="background:radial-gradient(closest-side, rgba(184,153,104,0.25), transparent 70%);"></div>
-        <div class="absolute -bottom-32 -left-24 w-[360px] h-[360px] rounded-full opacity-40"
-             style="background:radial-gradient(closest-side, rgba(124,139,125,0.22), transparent 70%);"></div>
+        <div class="absolute -top-24 -right-24 w-[320px] h-[320px] rounded-full opacity-60"
+             style="background:radial-gradient(closest-side, rgba(37,99,235,0.32), transparent 70%);"></div>
+        <div class="absolute -bottom-32 -left-24 w-[360px] h-[360px] rounded-full opacity-60"
+             style="background:radial-gradient(closest-side, rgba(16,185,129,0.28), transparent 70%);"></div>
 
         <p class="text-[11px] sm:text-[12px] tracking-[0.32em] text-gold mb-5">PROBLEM <span class="vbar"></span> 問題提起</p>
 
@@ -505,7 +511,8 @@
           <!-- STEP 3 -->
           <div class="relative">
             <div class="flex items-center gap-3 mb-5">
-              <span class="num-chip inline-flex items-center justify-center w-9 h-9 rounded-full bg-gold text-white text-[12px] font-semibold">03</span>
+              <span class="num-chip inline-flex items-center justify-center w-9 h-9 rounded-full text-white text-[12px] font-semibold"
+                    style="background:linear-gradient(135deg,#2563EB 0%,#10B981 100%);">03</span>
               <span class="text-[11px] tracking-[0.22em] text-mute">DAY 30 – DAY 90</span>
             </div>
             <div class="space-y-3">
@@ -519,7 +526,7 @@
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
               <div class="flow-node rounded-xl px-4 py-3.5 flex items-center gap-3"
-                   style="background:linear-gradient(180deg,#C9A977 0%,#A8895A 100%);color:#fff;">
+                   style="background:linear-gradient(135deg,#2563EB 0%,#10B981 100%);color:#fff;">
                 <span class="w-8 h-8 rounded-md bg-white/15 flex items-center justify-center">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.6 6.3L21 9l-5 4.6L17.2 21 12 17.5 6.8 21 8 13.6 3 9l6.4-.7L12 2z"/></svg>
                 </span>
@@ -730,7 +737,7 @@
         </blockquote>
 
         <figcaption class="mt-10 flex items-center gap-3">
-          <div class="w-9 h-9 rounded-full bg-gradient-to-br from-goldLt to-gold flex items-center justify-center text-ink text-[11px] font-bold">RJ</div>
+          <div class="w-9 h-9 rounded-full bg-gradient-to-br from-brandBlue to-brandEm flex items-center justify-center text-white text-[11px] font-bold">RJ</div>
           <div>
             <div class="text-[12px] tracking-[0.16em] text-ink font-semibold">RISM JAPAN</div>
             <div class="text-[10.5px] tracking-[0.16em] text-mute">— 初期パートナー募集 メッセージ</div>
@@ -761,9 +768,9 @@
     <div class="absolute inset-0 opacity-[0.06]"
          style="background-image:linear-gradient(rgba(255,255,255,.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.5) 1px, transparent 1px); background-size: 28px 28px;"></div>
     <div class="absolute -top-40 -right-32 w-[420px] h-[420px] rounded-full"
-         style="background:radial-gradient(closest-side, rgba(184,153,104,0.22), transparent 70%);"></div>
+         style="background:radial-gradient(closest-side, rgba(37,99,235,0.28), transparent 70%);"></div>
     <div class="absolute -bottom-40 -left-32 w-[460px] h-[460px] rounded-full"
-         style="background:radial-gradient(closest-side, rgba(124,139,125,0.22), transparent 70%);"></div>
+         style="background:radial-gradient(closest-side, rgba(16,185,129,0.24), transparent 70%);"></div>
 
     <div class="max-w-5xl mx-auto px-5 sm:px-8 relative">
       <div class="flex items-center gap-3 mb-6">
@@ -901,7 +908,7 @@
         <!-- Form Card -->
         <div class="lg:col-span-7">
           <form
-            class="bg-paper border border-line rounded-2xl p-6 sm:p-8 shadow-[0_30px_60px_-30px_rgba(15,23,42,0.18)]"
+            class="bg-paper border border-line rounded-2xl p-6 sm:p-8 shadow-[0_30px_60px_-30px_rgba(30,41,57,0.18)]"
             onsubmit="event.preventDefault(); this.querySelector('button[type=submit]').setAttribute('aria-busy','true'); setTimeout(()=>{ this.style.display='none'; document.getElementById('thanks').classList.remove('hidden'); window.scrollTo({top: document.getElementById('thanks').offsetTop - 80, behavior:'smooth'}); }, 400);"
             aria-label="3社限定モニター申し込みフォーム">
 
@@ -998,9 +1005,9 @@
     <div class="absolute inset-0 opacity-[0.08]"
          style="background-image:linear-gradient(rgba(255,255,255,.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.5) 1px, transparent 1px); background-size: 36px 36px;"></div>
     <div class="absolute -top-40 -left-32 w-[500px] h-[500px] rounded-full"
-         style="background:radial-gradient(closest-side, rgba(184,153,104,0.28), transparent 70%);"></div>
+         style="background:radial-gradient(closest-side, rgba(37,99,235,0.32), transparent 70%);"></div>
     <div class="absolute -bottom-40 -right-32 w-[460px] h-[460px] rounded-full"
-         style="background:radial-gradient(closest-side, rgba(124,139,125,0.22), transparent 70%);"></div>
+         style="background:radial-gradient(closest-side, rgba(16,185,129,0.26), transparent 70%);"></div>
 
     <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center relative">
       <p class="text-[11px] sm:text-[12px] tracking-[0.32em] text-gold mb-6">FINAL <span class="vbar"></span> ラストCTA</p>
