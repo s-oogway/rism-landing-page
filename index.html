@@ -71,13 +71,14 @@
     }
     /* CTA */
     .cta-primary{
-      background:linear-gradient(180deg,#3B82F6 0%,#1D4ED8 100%);
-      box-shadow:0 1px 0 rgba(255,255,255,.22) inset, 0 10px 24px -10px rgba(29,78,216,.55);
-      transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+      background:linear-gradient(135deg,#2563EB 0%,#10B981 100%);
+      box-shadow:0 1px 0 rgba(255,255,255,.22) inset, 0 10px 24px -10px rgba(16,185,129,.5);
+      transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
     }
     .cta-primary:hover{
       transform:translateY(-1px);
-      box-shadow:0 1px 0 rgba(255,255,255,.28) inset, 0 16px 30px -10px rgba(29,78,216,.7);
+      filter:saturate(1.1) brightness(1.03);
+      box-shadow:0 1px 0 rgba(255,255,255,.28) inset, 0 16px 30px -10px rgba(16,185,129,.65);
     }
     .cta-primary:active{ transform:translateY(0); }
     .cta-gold{
@@ -160,17 +161,17 @@
       background:linear-gradient(90deg, #2563EB 0%, #10B981 100%);
       -webkit-background-clip:text; background-clip:text; color:transparent;
     }
-    /* benefit card top hairline — soft fading gold */
+    /* benefit card top — soft brand gradient hairline */
     .benefit-card{ position:relative; }
     .benefit-card::before{
       content:""; position:absolute; top:-1px; left:18px; right:18px; height:1px;
-      background:linear-gradient(90deg, transparent, rgba(184,153,104,0.75), transparent);
+      background:linear-gradient(90deg, transparent 0%, rgba(37,99,235,.55) 40%, rgba(16,185,129,.55) 60%, transparent 100%);
       pointer-events:none;
     }
-    /* sticky header bottom — soft fading gold hairline */
+    /* sticky header bottom — soft brand gradient hairline */
     .brand-border-bottom::after{
       content:""; position:absolute; left:0; right:0; bottom:-1px; height:1px;
-      background:linear-gradient(90deg, transparent, rgba(184,153,104,0.55), transparent);
+      background:linear-gradient(90deg, transparent 0%, rgba(37,99,235,.45) 40%, rgba(16,185,129,.45) 60%, transparent 100%);
       pointer-events:none;
     }
   </style>
@@ -203,9 +204,9 @@
   <section id="top" class="relative overflow-hidden">
     <div class="absolute inset-0 -z-10 grain opacity-60"></div>
     <div class="absolute -top-32 -right-32 w-[420px] h-[420px] rounded-full -z-10"
-         style="background:radial-gradient(closest-side, rgba(184,153,104,0.18), transparent 70%);"></div>
+         style="background:radial-gradient(closest-side, rgba(37,99,235,0.18), transparent 70%);"></div>
     <div class="absolute -bottom-40 -left-40 w-[480px] h-[480px] rounded-full -z-10"
-         style="background:radial-gradient(closest-side, rgba(37,99,235,0.12), transparent 70%);"></div>
+         style="background:radial-gradient(closest-side, rgba(16,185,129,0.16), transparent 70%);"></div>
 
     <div class="max-w-6xl mx-auto px-5 sm:px-8 pt-10 sm:pt-16 pb-14 sm:pb-24">
       <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
@@ -227,7 +228,7 @@
             新規集客を続けても、<br class="hidden sm:block" />
             <span class="relative inline-block">
               リピートは増えません。
-              <span class="absolute left-0 right-0 -bottom-1 h-[6px] bg-goldLt/70 -z-10 rounded-sm"></span>
+              <span class="absolute left-0 right-0 -bottom-1 h-[6px] brand-grad opacity-40 -z-10 rounded-sm"></span>
             </span>
           </h1>
 
@@ -277,7 +278,7 @@
               <span class="text-line_g font-semibold">●</span> 来店翌日フォロー
             </div>
             <div class="absolute -right-3 sm:-right-8 bottom-16 z-10 bg-ink text-white rounded-lg px-3 py-2 shadow-md text-[10px] tracking-[0.14em]">
-              <span class="text-gold">◆</span> 30日後 次回提案
+              <span class="text-brandEm">◆</span> 30日後 次回提案
             </div>
 
             <!-- Device -->
@@ -370,7 +371,7 @@
   <!-- ─────────────────────────── 2. EMPATHY ─────────────────────────── -->
   <section class="py-20 sm:py-32">
     <div class="max-w-3xl mx-auto px-6 sm:px-8 text-center">
-      <p class="text-[11px] sm:text-[12px] tracking-[0.32em] text-gold mb-6">EMPATHY <span class="vbar"></span> 共感</p>
+      <p class="text-[11px] sm:text-[12px] tracking-[0.32em] brand-text-grad font-semibold mb-6">EMPATHY <span class="vbar"></span> 共感</p>
       <h2 class="font-display text-[22px] leading-[1.7] sm:text-[30px] sm:leading-[1.6] font-bold text-ink">
         「またお願いします」と言われたのに、<br class="hidden sm:block"/>次回来店につながらない。
       </h2>
@@ -403,10 +404,10 @@
   <section class="pb-20 sm:pb-28">
     <div class="max-w-5xl mx-auto px-5 sm:px-8">
       <div class="relative rounded-2xl sm:rounded-[28px] bg-brandBlueLt text-ink p-7 sm:p-14 overflow-hidden border border-brandBlue/15">
-        <p class="text-[11px] sm:text-[12px] tracking-[0.32em] text-gold mb-5 relative">PROBLEM <span class="vbar"></span> 問題提起</p>
+        <p class="text-[11px] sm:text-[12px] tracking-[0.32em] brand-text-grad font-semibold mb-5 relative">PROBLEM <span class="vbar"></span> 問題提起</p>
 
         <h2 class="font-display text-[22px] leading-[1.6] sm:text-[34px] sm:leading-[1.5] font-bold tracking-[0.01em] relative">
-          美容サロンに必要なのは、<br/>「集客」ではなく、<span class="text-gold">「関係構築」</span>です。
+          美容サロンに必要なのは、<br/>「集客」ではなく、<span class="brand-text-grad font-bold">「関係構築」</span>です。
         </h2>
 
         <div class="hairline my-8 sm:my-10 relative"></div>
@@ -430,8 +431,8 @@
             <div class="text-[9px] sm:text-[10px] tracking-[0.18em] text-mute2">02</div>
             <div class="text-[11px] sm:text-[12.5px] text-ink2 mt-1">クーポン</div>
           </div>
-          <div class="border border-gold/60 rounded-lg px-2 py-3 text-center bg-gold/15">
-            <div class="text-[9px] sm:text-[10px] tracking-[0.18em] text-goldDk">03</div>
+          <div class="border border-brandBlue/40 rounded-lg px-2 py-3 text-center bg-brandBlue/10">
+            <div class="text-[9px] sm:text-[10px] tracking-[0.18em] text-brandBlueDk">03</div>
             <div class="text-[11px] sm:text-[12.5px] text-ink font-medium mt-1">また比較</div>
           </div>
         </div>
@@ -443,9 +444,9 @@
   <section class="py-20 sm:py-28 bg-paper border-y border-line">
     <div class="max-w-6xl mx-auto px-5 sm:px-8">
       <div class="max-w-3xl">
-        <p class="text-[11px] sm:text-[12px] tracking-[0.32em] text-gold mb-5">SOLUTION <span class="vbar"></span> 解決策</p>
+        <p class="text-[11px] sm:text-[12px] tracking-[0.32em] brand-text-grad font-semibold mb-5">SOLUTION <span class="vbar"></span> 解決策</p>
         <h2 class="font-display text-[22px] leading-[1.6] sm:text-[32px] sm:leading-[1.5] font-bold text-ink">
-          Rism Japanが作るのは、LINEではありません。<br/><span class="text-gold">“顧客教育導線”</span>です。
+          Rism Japanが作るのは、LINEではありません。<br/><span class="brand-text-grad font-bold">“顧客教育導線”</span>です。
         </h2>
       </div>
 
@@ -477,7 +478,8 @@
               <div class="flex justify-center text-line2">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
-              <div class="flow-node bg-brandBlue text-white border border-brandBlue rounded-xl px-4 py-3.5 flex items-center gap-3">
+              <div class="flow-node text-white border border-transparent rounded-xl px-4 py-3.5 flex items-center gap-3"
+                   style="background:linear-gradient(135deg,#2563EB 0%,#10B981 100%);">
                 <span class="w-8 h-8 rounded-md bg-white/20 flex items-center justify-center text-white">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 8l-9 6-9-6M4 6h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
                 </span>
@@ -514,7 +516,8 @@
               <div class="flex justify-center text-line2">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
-              <div class="flow-node bg-brandBlue text-white border border-brandBlue rounded-xl px-4 py-3.5 flex items-center gap-3">
+              <div class="flow-node text-white border border-transparent rounded-xl px-4 py-3.5 flex items-center gap-3"
+                   style="background:linear-gradient(135deg,#2563EB 0%,#10B981 100%);">
                 <span class="w-8 h-8 rounded-md bg-white/20 flex items-center justify-center text-white">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </span>
@@ -578,11 +581,11 @@
     <div class="max-w-6xl mx-auto px-5 sm:px-8">
       <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
         <div class="lg:col-span-6">
-          <p class="text-[11px] sm:text-[12px] tracking-[0.32em] text-gold mb-5">DIFFERENTIATION <span class="vbar"></span> 動画差別化</p>
+          <p class="text-[11px] sm:text-[12px] tracking-[0.32em] brand-text-grad font-semibold mb-5">DIFFERENTIATION <span class="vbar"></span> 動画差別化</p>
           <h2 class="font-display text-[22px] leading-[1.6] sm:text-[32px] sm:leading-[1.5] font-bold text-ink">
             美容は、“読む”より、<br/><span class="relative">
               “見る”が伝わる。
-              <span class="absolute left-0 right-0 -bottom-1 h-[6px] bg-goldLt/70 -z-10 rounded-sm"></span>
+              <span class="absolute left-0 right-0 -bottom-1 h-[6px] brand-grad opacity-40 -z-10 rounded-sm"></span>
             </span>
           </h2>
 
@@ -606,7 +609,7 @@
                   <div class="text-[14px] sm:text-[15px] text-ink font-medium mt-0.5">ヘアオイルの“量”</div>
                   <div class="text-[12px] text-mute mt-1">使いすぎ・足りなさをビジュアルで解決</div>
                 </div>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" class="text-gold mt-1" aria-hidden="true"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" class="text-brandEm mt-1" aria-hidden="true"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
               <div class="flex items-start gap-4 px-5 sm:px-7 py-5">
                 <div class="shrink-0 w-10 h-10 rounded-full bg-base flex items-center justify-center text-ink">
@@ -617,7 +620,7 @@
                   <div class="text-[14px] sm:text-[15px] text-ink font-medium mt-0.5">ドライヤーの当て方</div>
                   <div class="text-[12px] text-mute mt-1">角度・距離・順序を1分で理解</div>
                 </div>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" class="text-gold mt-1" aria-hidden="true"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" class="text-brandEm mt-1" aria-hidden="true"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
               <div class="flex items-start gap-4 px-5 sm:px-7 py-5">
                 <div class="shrink-0 w-10 h-10 rounded-full bg-base flex items-center justify-center text-ink">
@@ -628,7 +631,7 @@
                   <div class="text-[14px] sm:text-[15px] text-ink font-medium mt-0.5">スタイリング</div>
                   <div class="text-[12px] text-mute mt-1">朝5分で“サロン仕上がり”を再現</div>
                 </div>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" class="text-gold mt-1" aria-hidden="true"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" class="text-brandEm mt-1" aria-hidden="true"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
               <div class="flex items-start gap-4 px-5 sm:px-7 py-5">
                 <div class="shrink-0 w-10 h-10 rounded-full bg-base flex items-center justify-center text-ink">
@@ -639,7 +642,7 @@
                   <div class="text-[14px] sm:text-[15px] text-ink font-medium mt-0.5">ホームケア</div>
                   <div class="text-[12px] text-mute mt-1">毎日の習慣化までを動画で設計</div>
                 </div>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" class="text-gold mt-1" aria-hidden="true"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" class="text-brandEm mt-1" aria-hidden="true"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
             </div>
           </div>
@@ -652,7 +655,7 @@
   <section class="py-20 sm:py-28 bg-paper border-y border-line">
     <div class="max-w-5xl mx-auto px-5 sm:px-8">
       <div class="text-center max-w-3xl mx-auto">
-        <p class="text-[11px] sm:text-[12px] tracking-[0.32em] text-gold mb-5">OFFER <span class="vbar"></span> モニター募集</p>
+        <p class="text-[11px] sm:text-[12px] tracking-[0.32em] brand-text-grad font-semibold mb-5">OFFER <span class="vbar"></span> モニター募集</p>
         <h2 class="font-display text-[22px] leading-[1.6] sm:text-[32px] sm:leading-[1.5] font-bold text-ink">
           現在、<span class="text-gold">3社限定</span>で<br class="sm:hidden"/>初期パートナーを募集しています。
         </h2>
@@ -667,9 +670,9 @@
       <div class="mt-14 sm:mt-16">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4">
           <!-- 1 -->
-          <div class="benefit-card group relative bg-base rounded-2xl border border-line p-5 sm:p-6 hover:border-gold transition-colors">
+          <div class="benefit-card group relative bg-base rounded-2xl border border-line p-5 sm:p-6 hover:border-brandBlue transition-colors">
             <div class="flex items-center justify-between">
-              <span class="num-chip text-[10px] tracking-[0.2em] text-gold">BENEFIT&nbsp;01</span>
+              <span class="num-chip text-[10px] tracking-[0.2em] text-mute2">BENEFIT&nbsp;01</span>
               <span class="w-7 h-7 rounded-full bg-ink text-white flex items-center justify-center">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 1v22M5 8h8a4 4 0 0 1 0 8H5l3 3M19 8l-3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </span>
@@ -678,9 +681,9 @@
             <div class="mt-2 text-[11.5px] text-mute leading-[1.7]">モニター限定で、通常の導入費用を大幅に圧縮します。</div>
           </div>
           <!-- 2 -->
-          <div class="benefit-card group relative bg-base rounded-2xl border border-line p-5 sm:p-6 hover:border-gold transition-colors">
+          <div class="benefit-card group relative bg-base rounded-2xl border border-line p-5 sm:p-6 hover:border-brandBlue transition-colors">
             <div class="flex items-center justify-between">
-              <span class="num-chip text-[10px] tracking-[0.2em] text-gold">BENEFIT&nbsp;02</span>
+              <span class="num-chip text-[10px] tracking-[0.2em] text-mute2">BENEFIT&nbsp;02</span>
               <span class="w-7 h-7 rounded-full bg-ink text-white flex items-center justify-center">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.6"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
               </span>
@@ -689,9 +692,9 @@
             <div class="mt-2 text-[11.5px] text-mute leading-[1.7]">現状のリピートが伸びない原因を構造で可視化。</div>
           </div>
           <!-- 3 -->
-          <div class="benefit-card group relative bg-base rounded-2xl border border-line p-5 sm:p-6 hover:border-gold transition-colors">
+          <div class="benefit-card group relative bg-base rounded-2xl border border-line p-5 sm:p-6 hover:border-brandBlue transition-colors">
             <div class="flex items-center justify-between">
-              <span class="num-chip text-[10px] tracking-[0.2em] text-gold">BENEFIT&nbsp;03</span>
+              <span class="num-chip text-[10px] tracking-[0.2em] text-mute2">BENEFIT&nbsp;03</span>
               <span class="w-7 h-7 rounded-full bg-ink text-white flex items-center justify-center">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 2.6 1.6 4.9 4 6.4-.1.9-.5 2.5-.6 2.9 0 .2.1.4.4.3.2 0 2.3-1.5 3.2-2.1.9.2 2 .3 3 .3 5.5 0 10-3.7 10-8.1S17.5 2 12 2z"/></svg>
               </span>
@@ -700,9 +703,9 @@
             <div class="mt-2 text-[11.5px] text-mute leading-[1.7]">配信設計から自動化まで、改善ポイントを具体提案。</div>
           </div>
           <!-- 4 -->
-          <div class="benefit-card group relative bg-base rounded-2xl border border-line p-5 sm:p-6 hover:border-gold transition-colors">
+          <div class="benefit-card group relative bg-base rounded-2xl border border-line p-5 sm:p-6 hover:border-brandBlue transition-colors">
             <div class="flex items-center justify-between">
-              <span class="num-chip text-[10px] tracking-[0.2em] text-gold">BENEFIT&nbsp;04</span>
+              <span class="num-chip text-[10px] tracking-[0.2em] text-mute2">BENEFIT&nbsp;04</span>
               <span class="w-7 h-7 rounded-full bg-ink text-white flex items-center justify-center">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M10 9l6 3-6 3V9z" fill="currentColor"/></svg>
               </span>
@@ -711,9 +714,9 @@
             <div class="mt-2 text-[11.5px] text-mute leading-[1.7]">伝わる構成・尺・撮り方までを一緒に組み立てます。</div>
           </div>
           <!-- 5 -->
-          <div class="benefit-card group relative bg-base rounded-2xl border border-line p-5 sm:p-6 hover:border-gold transition-colors">
+          <div class="benefit-card group relative bg-base rounded-2xl border border-line p-5 sm:p-6 hover:border-brandBlue transition-colors">
             <div class="flex items-center justify-between">
-              <span class="num-chip text-[10px] tracking-[0.2em] text-gold">BENEFIT&nbsp;05</span>
+              <span class="num-chip text-[10px] tracking-[0.2em] text-mute2">BENEFIT&nbsp;05</span>
               <span class="w-7 h-7 rounded-full bg-ink text-white flex items-center justify-center">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M21 4v5h-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </span>
@@ -738,10 +741,10 @@
   <!-- ─────────────────────────── 7. SCARCITY (なぜ3社限定なのか) ─────────────────────────── -->
   <section class="py-20 sm:py-28">
     <div class="max-w-4xl mx-auto px-5 sm:px-8">
-      <p class="text-[11px] sm:text-[12px] tracking-[0.32em] text-gold mb-6 text-center">SCARCITY <span class="vbar"></span> なぜ3社限定なのか</p>
+      <p class="text-[11px] sm:text-[12px] tracking-[0.32em] brand-text-grad font-semibold mb-6 text-center">SCARCITY <span class="vbar"></span> なぜ3社限定なのか</p>
 
       <figure class="relative bg-paper border border-line rounded-2xl sm:rounded-[28px] p-8 sm:p-14">
-        <span aria-hidden="true" class="absolute -top-5 left-6 sm:-top-7 sm:left-10 text-gold/60 select-none"
+        <span aria-hidden="true" class="absolute -top-5 left-6 sm:-top-7 sm:left-10 text-brandBlue/50 select-none"
               style="font-size:90px;line-height:1;font-family:Georgia,serif;">“</span>
 
         <blockquote class="text-[15px] sm:text-[18px] leading-[2.1] sm:leading-[2.2] text-ink2 space-y-5 sm:space-y-6 font-medium">
@@ -771,7 +774,7 @@
           <div class="mt-1 text-[10px] sm:text-[11px] tracking-[0.18em] text-mute">DEEP&nbsp;PARTNER</div>
         </div>
         <div class="bg-base border border-line rounded-xl py-5">
-          <div class="num-chip text-[22px] sm:text-[28px] font-bold text-gold leading-none">1:1</div>
+          <div class="num-chip text-[22px] sm:text-[28px] font-bold brand-text-grad leading-none">1:1</div>
           <div class="mt-1 text-[10px] sm:text-[11px] tracking-[0.18em] text-mute">CUSTOM&nbsp;DESIGN</div>
         </div>
       </div>
@@ -783,8 +786,8 @@
 
     <div class="max-w-5xl mx-auto px-5 sm:px-8 relative">
       <div class="flex items-center gap-3 mb-6">
-        <span class="inline-flex items-center gap-1.5 text-[10px] sm:text-[11px] tracking-[0.22em] text-gold">
-          <span class="w-6 h-px bg-gold"></span>
+        <span class="inline-flex items-center gap-1.5 text-[10px] sm:text-[11px] tracking-[0.22em] brand-text-grad font-semibold">
+          <span class="w-6 h-px brand-grad"></span>
           AUTHORITY <span class="vbar"></span> 若さを武器化する
         </span>
       </div>
@@ -804,19 +807,19 @@
           <p>だからこそ、ただ若いだけではなく、海外のスピード感や、動画・LINE・SNSを前提とした顧客接点の作り方を自然に理解しています。</p>
           <p>美容業界に必要なのは、昔ながらの一方的な配信ではなく、お客様の日常に自然に入り込むコミュニケーションです。</p>
           <p class="text-ink">
-            Rism Japanは、<span class="font-semibold text-gold">SNS・動画・LINEネイティブ世代の感覚</span>と、
-            <span class="font-semibold text-gold">シリコンバレーで培った時代感度</span>を活かして、
+            Rism Japanは、<span class="font-bold brand-text-grad">SNS・動画・LINEネイティブ世代の感覚</span>と、
+            <span class="font-bold brand-text-grad">シリコンバレーで培った時代感度</span>を活かして、
             “今の顧客接点”を前提に導線を設計します。
           </p>
         </div>
 
         <div class="lg:col-span-5">
           <div class="rounded-2xl border border-line bg-paper p-6 sm:p-7 shadow-[0_20px_50px_-30px_rgba(30,41,57,0.18)]">
-            <div class="text-[10px] tracking-[0.24em] text-gold">TEAM SIGNAL</div>
+            <div class="text-[10px] tracking-[0.24em] brand-text-grad font-semibold">TEAM SIGNAL</div>
             <div class="mt-4 space-y-4">
               <div class="flex items-start gap-3">
                 <div class="w-9 h-9 rounded-full bg-base flex items-center justify-center shrink-0">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#B89968" stroke-width="1.5"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18" stroke="#B89968" stroke-width="1.5"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#1E2939" stroke-width="1.5"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18" stroke="#1E2939" stroke-width="1.5"/></svg>
                 </div>
                 <div>
                   <div class="text-[13px] text-ink font-medium">Silicon Valley</div>
@@ -826,7 +829,7 @@
               <div class="h-px bg-line"></div>
               <div class="flex items-start gap-3">
                 <div class="w-9 h-9 rounded-full bg-base flex items-center justify-center shrink-0">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#B89968" stroke-width="1.5"/><path d="M10 9l6 3-6 3V9z" fill="#B89968"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#1E2939" stroke-width="1.5"/><path d="M10 9l6 3-6 3V9z" fill="#1E2939"/></svg>
                 </div>
                 <div>
                   <div class="text-[13px] text-ink font-medium">Short Video Native</div>
@@ -836,7 +839,7 @@
               <div class="h-px bg-line"></div>
               <div class="flex items-start gap-3">
                 <div class="w-9 h-9 rounded-full bg-base flex items-center justify-center shrink-0">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="#B89968" aria-hidden="true"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 2.6 1.6 4.9 4 6.4-.1.9-.5 2.5-.6 2.9 0 .2.1.4.4.3.2 0 2.3-1.5 3.2-2.1.9.2 2 .3 3 .3 5.5 0 10-3.7 10-8.1S17.5 2 12 2z"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="#1E2939" aria-hidden="true"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 2.6 1.6 4.9 4 6.4-.1.9-.5 2.5-.6 2.9 0 .2.1.4.4.3.2 0 2.3-1.5 3.2-2.1.9.2 2 .3 3 .3 5.5 0 10-3.7 10-8.1S17.5 2 12 2z"/></svg>
                 </div>
                 <div>
                   <div class="text-[13px] text-ink font-medium">LINE × Lstep Design</div>
@@ -854,9 +857,9 @@
   <section id="form" class="py-20 sm:py-28 bg-base">
     <div class="max-w-5xl mx-auto px-5 sm:px-8">
       <div class="text-center max-w-3xl mx-auto">
-        <p class="text-[11px] sm:text-[12px] tracking-[0.32em] text-gold mb-5">FREE DIAGNOSIS <span class="vbar"></span> 無料診断</p>
+        <p class="text-[11px] sm:text-[12px] tracking-[0.32em] brand-text-grad font-semibold mb-5">FREE DIAGNOSIS <span class="vbar"></span> 無料診断</p>
         <h2 class="font-display text-[22px] leading-[1.6] sm:text-[32px] sm:leading-[1.5] font-bold text-ink">
-          ありがちな“無料相談”ではなく、<br class="sm:hidden"/><span class="text-gold">“再来店導線”の構造診断</span>です。
+          ありがちな“無料相談”ではなく、<br class="sm:hidden"/><span class="brand-text-grad font-bold">“再来店導線”の構造診断</span>です。
         </h2>
         <p class="mt-5 text-[13px] sm:text-[14px] text-mute leading-[2]">
           モニター契約は伴いません。サロンの現状を構造で見える化し、改善ポイントを整理してお渡しします。
@@ -870,37 +873,37 @@
             <div class="text-[11px] tracking-[0.22em] text-mute2 mb-5">診断でわかること</div>
             <ul class="space-y-4">
               <li class="flex items-start gap-3">
-                <span class="shrink-0 mt-0.5 w-6 h-6 rounded-full bg-ink text-gold flex items-center justify-center">
+                <span class="shrink-0 mt-0.5 w-6 h-6 rounded-full bg-ink text-brandEm flex items-center justify-center">
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </span>
                 <span class="text-[13.5px] sm:text-[14px] text-ink2 leading-[1.9]">なぜ2回目につながらないのか</span>
               </li>
               <li class="flex items-start gap-3">
-                <span class="shrink-0 mt-0.5 w-6 h-6 rounded-full bg-ink text-gold flex items-center justify-center">
+                <span class="shrink-0 mt-0.5 w-6 h-6 rounded-full bg-ink text-brandEm flex items-center justify-center">
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </span>
                 <span class="text-[13.5px] sm:text-[14px] text-ink2 leading-[1.9]">LINEが止まる原因</span>
               </li>
               <li class="flex items-start gap-3">
-                <span class="shrink-0 mt-0.5 w-6 h-6 rounded-full bg-ink text-gold flex items-center justify-center">
+                <span class="shrink-0 mt-0.5 w-6 h-6 rounded-full bg-ink text-brandEm flex items-center justify-center">
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </span>
                 <span class="text-[13.5px] sm:text-[14px] text-ink2 leading-[1.9]">店販が伸びない理由</span>
               </li>
               <li class="flex items-start gap-3">
-                <span class="shrink-0 mt-0.5 w-6 h-6 rounded-full bg-ink text-gold flex items-center justify-center">
+                <span class="shrink-0 mt-0.5 w-6 h-6 rounded-full bg-ink text-brandEm flex items-center justify-center">
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </span>
                 <span class="text-[13.5px] sm:text-[14px] text-ink2 leading-[1.9]">来店後に送るべき内容</span>
               </li>
               <li class="flex items-start gap-3">
-                <span class="shrink-0 mt-0.5 w-6 h-6 rounded-full bg-ink text-gold flex items-center justify-center">
+                <span class="shrink-0 mt-0.5 w-6 h-6 rounded-full bg-ink text-brandEm flex items-center justify-center">
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </span>
                 <span class="text-[13.5px] sm:text-[14px] text-ink2 leading-[1.9]">自動化できるポイント</span>
               </li>
               <li class="flex items-start gap-3">
-                <span class="shrink-0 mt-0.5 w-6 h-6 rounded-full bg-ink text-gold flex items-center justify-center">
+                <span class="shrink-0 mt-0.5 w-6 h-6 rounded-full bg-ink text-brandEm flex items-center justify-center">
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </span>
                 <span class="text-[13.5px] sm:text-[14px] text-ink2 leading-[1.9]">Hot Pepper依存を減らす方法</span>
@@ -923,13 +926,13 @@
 
             <div class="flex items-center justify-between mb-6">
               <div class="text-[11px] tracking-[0.22em] text-mute2">APPLICATION FORM</div>
-              <div class="text-[11px] tracking-[0.16em] text-gold">所要時間 約60秒</div>
+              <div class="text-[11px] tracking-[0.16em] text-mute">所要時間 約60秒</div>
             </div>
 
             <!-- Salon -->
             <div class="mb-5">
               <label for="salon" class="block text-[12.5px] text-ink font-medium mb-2 tracking-[0.06em]">
-                サロン名 <span class="text-gold ml-1">*</span>
+                サロン名 <span class="text-brandBlue ml-1">*</span>
               </label>
               <input id="salon" name="salon" type="text" required
                      placeholder="例：Rism Hair &amp; Make"
@@ -939,7 +942,7 @@
             <!-- Contact -->
             <div class="mb-5">
               <label for="contact" class="block text-[12.5px] text-ink font-medium mb-2 tracking-[0.06em]">
-                ご担当者氏名 <span class="text-gold ml-1">*</span>
+                ご担当者氏名 <span class="text-brandBlue ml-1">*</span>
               </label>
               <input id="contact" name="contact" type="text" required
                      placeholder="例：山田 花子"
@@ -949,7 +952,7 @@
             <!-- Email -->
             <div class="mb-5">
               <label for="email" class="block text-[12.5px] text-ink font-medium mb-2 tracking-[0.06em]">
-                メールアドレス <span class="text-gold ml-1">*</span>
+                メールアドレス <span class="text-brandBlue ml-1">*</span>
               </label>
               <input id="email" name="email" type="email" required inputmode="email" autocomplete="email"
                      placeholder="name@salon.jp"
@@ -959,7 +962,7 @@
             <!-- LINE usage -->
             <fieldset class="mb-6">
               <legend class="block text-[12.5px] text-ink font-medium mb-2 tracking-[0.06em]">
-                現在のLINE運用の有無 <span class="text-gold ml-1">*</span>
+                現在のLINE運用の有無 <span class="text-brandBlue ml-1">*</span>
               </legend>
               <div class="grid grid-cols-2 gap-3">
                 <label class="radio-card cursor-pointer flex items-center justify-center gap-2 bg-base border border-line rounded-lg px-4 py-3.5 text-[13.5px] text-ink2">
@@ -998,7 +1001,7 @@
 
           <!-- Thanks state -->
           <div id="thanks" class="hidden mt-2 bg-paper border border-line rounded-2xl p-8 text-center">
-            <div class="w-12 h-12 rounded-full bg-ink text-gold mx-auto flex items-center justify-center">
+            <div class="w-12 h-12 rounded-full bg-ink text-brandEm mx-auto flex items-center justify-center">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
             <div class="mt-5 text-[16px] font-semibold text-ink">お申し込みありがとうございます。</div>
@@ -1013,11 +1016,11 @@
   <section class="relative bg-brandBlueLt text-ink py-20 sm:py-28 overflow-hidden border-y border-brandBlue/15">
 
     <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center relative">
-      <p class="text-[11px] sm:text-[12px] tracking-[0.32em] text-gold mb-6">FINAL <span class="vbar"></span> ラストCTA</p>
+      <p class="text-[11px] sm:text-[12px] tracking-[0.32em] brand-text-grad font-semibold mb-6">FINAL <span class="vbar"></span> ラストCTA</p>
 
       <h2 class="font-display text-[24px] leading-[1.55] sm:text-[38px] sm:leading-[1.45] font-bold">
         集客して終わりにするか。<br/>
-        <span class="text-gold">来店後まで設計するか。</span>
+        <span class="brand-text-grad font-bold">来店後まで設計するか。</span>
       </h2>
 
       <div class="hairline my-10 max-w-md mx-auto"></div>
@@ -1047,7 +1050,7 @@
   <footer class="bg-base text-mute border-t border-line">
     <div class="max-w-6xl mx-auto px-5 sm:px-8 py-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
       <div class="flex items-center gap-2.5">
-        <span class="inline-block w-2 h-2 rounded-full bg-gold"></span>
+        <span class="inline-block w-2 h-2 rounded-full brand-grad"></span>
         <span class="text-[12px] tracking-[0.22em] text-ink">RISM&nbsp;JAPAN</span>
       </div>
       <div class="text-[11px] tracking-[0.14em] text-mute2">
