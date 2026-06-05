@@ -788,21 +788,16 @@
   </div>
 </section>
 
-<!-- ────────── 10 — Contact (Calendly inline widget) ────────── -->
+<!-- ────────── 10 — Contact (TimeRex inline widget) ────────── -->
 <!--
-  NOTE for developer:
-  Calendly inline embed below. Before going live:
-    1. Replace the placeholder URL in data-url="..." with your actual Calendly
-       event link (e.g. https://calendly.com/rism-japan/30min).
-    2. In your Calendly event settings, enable the Google Meet integration
-       (Account → Integrations → Google Calendar/Meet) so each booking
-       auto-generates a Meet link.
-    3. Add custom intake questions inside Calendly (Event type → Invitee
-       Questions): サロン名, 店舗数, LINE/Lステップ状況 (single-select),
-       現在の課題 (multi-select), etc. — Calendly captures these in the
-       booking confirmation + event dashboard.
-  No data is captured on this page itself; Calendly handles capture +
-  confirmation emails.
+  TimeRex inline embed.
+  Event: https://timerex.net/s/rism-japan/103d33c2
+  To change the booking event:
+    1. Update data-url on #timerex_calendar below
+    2. Update the noscript fallback link
+  TimeRex handles calendar UI, custom intake questions, Google Meet link
+  creation, and confirmation emails — all in Japanese, all on their side.
+  Nothing is captured on this page.
 -->
 <section id="form" class="bg-paper border-b border-border1">
   <div class="max-w-3xl mx-auto px-5 sm:px-8 pt-14 sm:pt-20 pb-14 sm:pb-20">
@@ -811,34 +806,30 @@
       再来店導線についてご相談ください
     </h2>
     <p class="mt-5 text-[13.5px] sm:text-[14.5px] leading-[1.9] text-slate2">
-      下記カレンダーからご都合の良い日時をお選びいただくと、Google Meetでの無料相談をご予約いただけます。サロン名・店舗数・LINE運用状況・現在の課題は予約フォームでお伺いします。
+      下記カレンダーからご都合の良い日時をお選びいただくと、Google Meetでのオンライン相談をご予約いただけます。サロン名・店舗数・LINE運用状況・現在の課題は予約フォームでお伺いします。
     </p>
 
-    <!-- Calendly inline widget — replace data-url with your event link before deploy -->
+    <!-- TimeRex inline widget -->
     <div class="mt-8 sm:mt-10 rounded-2xl border border-border1 bg-paper overflow-hidden shadow-[0_20px_50px_-30px_rgba(26,34,48,0.18)]">
-      <div
-        class="calendly-inline-widget"
-        data-url="https://calendly.com/YOUR-RISM-JAPAN-LINK?hide_gdpr_banner=1&primary_color=1A2230"
-        style="min-width:320px;height:720px;"
-        aria-label="Calendly 予約カレンダー"
-      ></div>
+      <div id="timerex_calendar" data-url="https://timerex.net/s/rism-japan/103d33c2"></div>
     </div>
 
     <p class="mt-4 text-[12px] text-mute leading-[1.8]">
-      ご予約後、担当者よりGoogle Meetのリンクをメールでお送りします。3社限定モニターの対象となる場合は、当日に具体的な導入内容もあわせてご案内します。
+      ご予約後、Google Meetのリンクを自動で発行いたします。3社限定モニターの対象となる場合は、当日に具体的な導入内容もあわせてご案内します。
     </p>
 
     <noscript>
       <p class="mt-6 text-[13px] text-charcoal">
         カレンダーを表示するにはJavaScriptを有効にしてください。
-        <a href="https://calendly.com/YOUR-RISM-JAPAN-LINK" class="underline">こちらのリンク</a>から予約ページを開くこともできます。
+        <a href="https://timerex.net/s/rism-japan/103d33c2" class="underline">こちらのリンク</a>から予約ページを開くこともできます。
       </p>
     </noscript>
   </div>
 </section>
 
-<!-- Calendly embed script (loaded async; safe and stateless) -->
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- TimeRex embed scripts (load after the widget container is in the DOM) -->
+<script id="timerex_embed" src="https://asset.timerex.net/js/embed.js"></script>
+<script>TimerexCalendar();</script>
 
 <!-- ────────── Footer ────────── -->
 <footer>
