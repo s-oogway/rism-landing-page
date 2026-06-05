@@ -788,17 +788,21 @@
   </div>
 </section>
 
-<!-- ────────── 09 — Contact Form ────────── -->
+<!-- ────────── 10 — Contact (Calendly inline widget) ────────── -->
 <!--
   NOTE for developer:
-  This form is currently NOT wired to a backend.
-  Submitting shows a confirmation UI but does NOT transmit data.
-  Before going live, do ONE of the following:
-    1. Replace the JS submit handler (#form-handler) with a fetch() to your endpoint, e.g.:
-         fetch('/api/inquire', { method: 'POST', body: new FormData(form) })
-    2. Set <form action="..." method="POST"> to a serverless endpoint
-       (Formspree / Netlify Forms / Cloudflare Worker / etc.)
-    3. Switch the submit handler to build a mailto: link.
+  Calendly inline embed below. Before going live:
+    1. Replace the placeholder URL in data-url="..." with your actual Calendly
+       event link (e.g. https://calendly.com/rism-japan/30min).
+    2. In your Calendly event settings, enable the Google Meet integration
+       (Account → Integrations → Google Calendar/Meet) so each booking
+       auto-generates a Meet link.
+    3. Add custom intake questions inside Calendly (Event type → Invitee
+       Questions): サロン名, 店舗数, LINE/Lステップ状況 (single-select),
+       現在の課題 (multi-select), etc. — Calendly captures these in the
+       booking confirmation + event dashboard.
+  No data is captured on this page itself; Calendly handles capture +
+  confirmation emails.
 -->
 <section id="form" class="bg-paper border-b border-border1">
   <div class="max-w-3xl mx-auto px-5 sm:px-8 pt-14 sm:pt-20 pb-14 sm:pb-20">
@@ -807,79 +811,34 @@
       再来店導線についてご相談ください
     </h2>
     <p class="mt-5 text-[13.5px] sm:text-[14.5px] leading-[1.9] text-slate2">
-      現在のLINE・Lステップ運用、顧客セグメント、店販フォロー、リピート率の課題をもとに、貴サロンに合う再来店導線についてご相談いただけます。
+      下記カレンダーからご都合の良い日時をお選びいただくと、Google Meetでの無料相談をご予約いただけます。サロン名・店舗数・LINE運用状況・現在の課題は予約フォームでお伺いします。
     </p>
 
-    <form class="mt-10 space-y-5 sm:space-y-6" id="contact-form" novalidate>
-      <div>
-        <label for="f-salon" class="field-label">サロン名 <span class="req">*</span></label>
-        <input id="f-salon" name="salon" type="text" required class="field" placeholder="例：Rism Hair &amp; Make"/>
-      </div>
-      <div class="grid sm:grid-cols-2 gap-4 sm:gap-5">
-        <div>
-          <label for="f-contact" class="field-label">ご担当者名 <span class="req">*</span></label>
-          <input id="f-contact" name="contact" type="text" required class="field" placeholder="例：山田 花子"/>
-        </div>
-        <div>
-          <label for="f-stores" class="field-label">店舗数</label>
-          <input id="f-stores" name="stores" type="text" class="field" placeholder="例：1店舗"/>
-        </div>
-      </div>
-      <div class="grid sm:grid-cols-2 gap-4 sm:gap-5">
-        <div>
-          <label for="f-email" class="field-label">メールアドレス <span class="req">*</span></label>
-          <input id="f-email" name="email" type="email" required inputmode="email" autocomplete="email" class="field" placeholder="name@salon.jp"/>
-        </div>
-        <div>
-          <label for="f-phone" class="field-label">電話番号 / 連絡先</label>
-          <input id="f-phone" name="phone" type="text" inputmode="tel" autocomplete="tel" class="field" placeholder="例：03-1234-5678"/>
-        </div>
-      </div>
-
-      <fieldset>
-        <legend class="field-label">LINE / Lステップ状況 <span class="req">*</span></legend>
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3">
-          <label class="radio-card"><input type="radio" name="line_status" value="公式LINEなし" required class="sr-only"/>公式LINEなし</label>
-          <label class="radio-card"><input type="radio" name="line_status" value="公式LINEあり" class="sr-only"/>公式LINEあり</label>
-          <label class="radio-card"><input type="radio" name="line_status" value="Lステップ導入済み" class="sr-only"/>Lステップ導入済み</label>
-          <label class="radio-card"><input type="radio" name="line_status" value="わからない" class="sr-only"/>わからない</label>
-        </div>
-      </fieldset>
-
-      <fieldset>
-        <legend class="field-label">現在の課題 <span class="text-mute2 ml-1 font-normal">（複数選択可）</span></legend>
-        <div class="grid sm:grid-cols-2 gap-2.5 sm:gap-3">
-          <label class="radio-card"><input type="checkbox" name="issues" value="セグメント配信ができていない" class="sr-only"/>セグメント配信ができていない</label>
-          <label class="radio-card"><input type="checkbox" name="issues" value="店販が伸びない" class="sr-only"/>店販が伸びない</label>
-          <label class="radio-card"><input type="checkbox" name="issues" value="リピート率が低い" class="sr-only"/>リピート率が低い</label>
-          <label class="radio-card"><input type="checkbox" name="issues" value="休眠顧客が多い" class="sr-only"/>休眠顧客が多い</label>
-          <label class="radio-card"><input type="checkbox" name="issues" value="LINE配信が止まっている" class="sr-only"/>LINE配信が止まっている</label>
-          <label class="radio-card"><input type="checkbox" name="issues" value="その他" class="sr-only"/>その他</label>
-        </div>
-      </fieldset>
-
-      <div class="pt-4">
-        <button type="submit" class="cta w-full sm:w-auto">
-          再来店導線について相談する
-          <svg class="arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <p class="mt-4 text-[12px] text-mute leading-[1.8]">
-          内容を確認後、担当者よりご連絡いたします。3社限定モニターの対象となる場合は、具体的な導入内容もあわせてご案内します。
-        </p>
-      </div>
-    </form>
-
-    <div id="form-thanks" class="hidden mt-10 bg-cream border border-border1 rounded-xl p-7 sm:p-9 text-center">
-      <div class="text-[10.5px] tracking-[0.24em] text-gold uppercase font-semibold">Received</div>
-      <div class="mt-3 text-[16px] sm:text-[17px] font-bold text-charcoal">ご入力ありがとうございます</div>
-      <p class="mt-3 text-[13px] text-slate2 leading-[1.9]">
-        内容を確認のうえ、担当者よりご連絡いたします。
-      </p>
+    <!-- Calendly inline widget — replace data-url with your event link before deploy -->
+    <div class="mt-8 sm:mt-10 rounded-2xl border border-border1 bg-paper overflow-hidden shadow-[0_20px_50px_-30px_rgba(26,34,48,0.18)]">
+      <div
+        class="calendly-inline-widget"
+        data-url="https://calendly.com/YOUR-RISM-JAPAN-LINK?hide_gdpr_banner=1&primary_color=1A2230"
+        style="min-width:320px;height:720px;"
+        aria-label="Calendly 予約カレンダー"
+      ></div>
     </div>
+
+    <p class="mt-4 text-[12px] text-mute leading-[1.8]">
+      ご予約後、担当者よりGoogle Meetのリンクをメールでお送りします。3社限定モニターの対象となる場合は、当日に具体的な導入内容もあわせてご案内します。
+    </p>
+
+    <noscript>
+      <p class="mt-6 text-[13px] text-charcoal">
+        カレンダーを表示するにはJavaScriptを有効にしてください。
+        <a href="https://calendly.com/YOUR-RISM-JAPAN-LINK" class="underline">こちらのリンク</a>から予約ページを開くこともできます。
+      </p>
+    </noscript>
   </div>
 </section>
+
+<!-- Calendly embed script (loaded async; safe and stateless) -->
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
 <!-- ────────── Footer ────────── -->
 <footer>
@@ -981,28 +940,6 @@
 })();
 </script>
 
-<script id="form-handler">
-(function(){
-  const form = document.getElementById('contact-form');
-  const thanks = document.getElementById('form-thanks');
-  if (!form) return;
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    // TODO (developer): wire to a real backend endpoint before going live.
-    // Example:
-    //   const data = new FormData(form);
-    //   fetch('/api/inquire', { method: 'POST', body: data })
-    //     .then(r => r.ok ? showThanks() : showError())
-    //     .catch(showError);
-    // Currently this only displays a confirmation UI — NO data is transmitted.
-    form.style.display = 'none';
-    if (thanks) {
-      thanks.classList.remove('hidden');
-      thanks.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  });
-})();
-</script>
 
 <script id="reveal-script">
 (function(){
