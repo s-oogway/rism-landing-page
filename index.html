@@ -7,6 +7,13 @@
 <title>Rism Japan ｜ 再来店導線について相談する</title>
 <meta name="description" content="公式LINEが「お知らせツール」で止まっていませんか。Rism Japanは、施術履歴・来店回数・購入履歴に合わせたLINE導線を設計し、店販提案と2回目予約の仕組み化を支援します。Lステップ未導入のサロンも対象。3社限定でモニター募集中。" />
 <meta name="format-detection" content="telephone=no" />
+<link rel="canonical" href="https://salon.rism.co.jp/" />
+<!--
+  This page is intentionally not indexed because it is a campaign-specific
+  landing page distributed directly through outreach/ads. Public discovery
+  via search is not desired.
+-->
+<meta name="robots" content="noindex, nofollow" />
 <link rel="icon" type="image/png" href="logo.png" />
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
@@ -946,6 +953,101 @@
     });
   }, { threshold: 0.1 });
   targets.forEach(el => io.observe(el));
+})();
+</script>
+
+<!--
+  ────────── GA4 placeholder + event tracking ──────────
+  The Measurement ID below is a placeholder. Replace `G-XXXXXXXXXX` with
+  the real GA4 ID before going live. The gtag script is loaded conditionally,
+  so the page works fine while the placeholder is still in place — no broken
+  network requests, no console errors.
+
+  Events tracked when GA is configured:
+    - cta_click   : every click on the 「再来店導線について相談する」 CTA
+    - form_start  : best-effort, when the booking section enters the viewport
+                    (the TimeRex form is in a cross-origin iframe, so real
+                    input events inside it cannot be observed from this page)
+    - form_submit : listens for postMessage from the TimeRex origin and
+                    fires if a booking-completion-like message is detected.
+                    For accurate tracking, wire TimeRex's webhook to a
+                    server-side GA Measurement Protocol call instead.
+    - scroll_75   : once per session when the visitor reaches 75% of scroll
+-->
+<script id="ga-init">
+(function(){
+  var GA_ID = 'G-XXXXXXXXXX';
+  var GA_ENABLED = GA_ID && GA_ID !== 'G-XXXXXXXXXX';
+
+  window.dataLayer = window.dataLayer || [];
+  if (!window.gtag) {
+    window.gtag = function(){ window.dataLayer.push(arguments); };
+  }
+
+  if (GA_ENABLED) {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(GA_ID);
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', GA_ID, { anonymize_ip: true });
+  }
+
+  function safeTrack(name, params){
+    try { gtag('event', name, params || {}); } catch(e){}
+  }
+
+  // cta_click
+  document.querySelectorAll('a.cta, button.cta').forEach(function(el){
+    el.addEventListener('click', function(){
+      safeTrack('cta_click', {
+        cta_label: '再来店導線について相談する',
+        location: (el.closest('section') && el.closest('section').id) || 'header_or_sticky'
+      });
+    });
+  });
+
+  // form_start — proxy: §10 enters viewport at 40%+ visibility
+  var formSection = document.getElementById('form');
+  if (formSection && 'IntersectionObserver' in window) {
+    var fired = false;
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting && !fired) {
+          fired = true;
+          safeTrack('form_start');
+          io.disconnect();
+        }
+      });
+    }, { threshold: 0.4 });
+    io.observe(formSection);
+  }
+
+  // form_submit — best-effort listener for TimeRex postMessage
+  window.addEventListener('message', function(e){
+    if (!e.origin || e.origin.indexOf('timerex.net') === -1) return;
+    var sig = '';
+    try { sig = typeof e.data === 'string' ? e.data : JSON.stringify(e.data); }
+    catch (err) { return; }
+    if (/reserved|complete|success|booked|confirmed|完了|予約/i.test(sig)) {
+      safeTrack('form_submit');
+    }
+  });
+
+  // scroll_75
+  (function(){
+    var fired = false;
+    window.addEventListener('scroll', function(){
+      if (fired) return;
+      var doc = document.documentElement;
+      var reachable = (doc.scrollHeight - doc.clientHeight) || 1;
+      var ratio = doc.scrollTop / reachable;
+      if (ratio >= 0.75) {
+        fired = true;
+        safeTrack('scroll_75');
+      }
+    }, { passive: true });
+  })();
 })();
 </script>
 
